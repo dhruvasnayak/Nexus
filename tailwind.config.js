@@ -7,21 +7,21 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-      fontFamily: {
-        inter: 'Inter, sans-serif',
-        montserrat: 'Montserrat, sans-serif',
-        bricolage: 'Bricolage, sans-serif',
-      },
+			fontFamily: {
+				inter: "Inter, sans-serif",
+				montserrat: "Montserrat, sans-serif",
+				bricolage: "Bricolage, sans-serif",
+			},
 			backgroundImage: {
 				"gradient-linear": "linear-gradient(#009efd, #006dfa)",
 			},
 			colors: {
 				primary: "#009EFD",
 				secondary: "#006DFA",
-        text: '#E6E6E6',
-        'secondary-text': '#888888',
-        shaded: '#0A0A0A',
-        background: '#040305',
+				"text-primary": "#E6E6E6",
+				"text-secondary": "#888888",
+				shaded: "#0A0A0A",
+				background: "#040305",
 			},
 		},
 	},
