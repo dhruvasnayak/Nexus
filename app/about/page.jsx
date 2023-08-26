@@ -5,11 +5,12 @@ const About = () => {
 	return (
 		<div>
 			About
-			<Button>Sarang</Button>
 			<Button size="sm">Sarang</Button>
+			<Button>Sarang</Button>
 			<Button size="lg">Sarang</Button>
-			<Button size="lg" variant="outline" className='w-full'>Sarang</Button>
-		</div>
+			<Button size="lg" variant="outline" className='w-full' href="www.google.com">Sarang</Button>
+			<Button size="lg" variant="ghost" className='w-full' href="www.google.com">Sarang</Button>
+		</div> 
 	);
 };
 

@@ -2,7 +2,11 @@ import React from 'react'
 
 const Activities = () => {
   return (
-    <div>Activities</div>
+    <div>Activities
+	
+	<ActivityContainer />
+	<ActivityContainer />
+	</div>
   )
 }
 
@@ -10,7 +14,7 @@ export default Activities
 
 
 
-const AvtivityContainer = () => {
+const ActivityContainer = () => {
 	return (
 		<div>
 			Activity Container
