@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Event {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  name        String
+  icon        String
+  domain      String
+  content     String
+  description String
+  date        DateTime
+  images      Images[]
+}
+
+model Images {
+  imageid   Int      @id @default(autoincrement())
+  projectId Int?
+  caption   String
+  url       String
+  event     Event?   @relation(fields: [imageid], references: [id])
+  Project   Project? @relation(fields: [projectId], references: [id])
+
+  @@index([projectId])
+  @@index([imageid])
+}
+
+model Project {
+  id             Int      @id @default(autoincrement())
+  createdAt      DateTime @default(now())
+  name           String
+  icon           String
+  domain         String
+  github_link    String
+  deploymentLink String?
+  summary        String
+  content        String
+  images         Images[]
+  team           Team[]
+}
+
+model Team {
+  id              Int       @id @default(autoincrement())
+  name            String
+  profilepic      String
+  position        String
+  domain          String
+  github_username String
+  project         Project[]
+}
