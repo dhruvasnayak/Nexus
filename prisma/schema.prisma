@@ -12,7 +12,7 @@ datasource db {
 }
 
 model Event {
-  id          Int      @id @default(autoincrement())
+  id          String   @id @unique @default(uuid())
   createdAt   DateTime @default(now())
   name        String
   icon        String
@@ -24,8 +24,8 @@ model Event {
 }
 
 model Images {
-  imageid   Int      @id @default(autoincrement())
-  projectId Int?
+  imageid   String   @id @unique @default(uuid())
+  projectId String?  @unique @default(uuid())
   caption   String
   url       String
   event     Event?   @relation(fields: [imageid], references: [id])
@@ -36,7 +36,7 @@ model Images {
 }
 
 model Project {
-  id             Int      @id @default(autoincrement())
+  id             String   @id @unique @default(uuid())
   createdAt      DateTime @default(now())
   name           String
   icon           String
@@ -50,7 +50,7 @@ model Project {
 }
 
 model Team {
-  id              Int       @id @default(autoincrement())
+  id              String    @id @unique @default(uuid())
   name            String
   profilepic      String
   position        String
