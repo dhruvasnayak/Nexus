@@ -1,11 +1,7 @@
-'use client'
-
-import { useParams } from 'next/navigation';
-
-const   EventsPage = ()=> {
-  const params = useParams()
-  const event = params.event;
-  return <div>Event: {event}</div>
+const EventDetail = ({params}) => {
+  return (
+    <div>EventDetail {params.event}</div>
+  )
 }
 
-export default  EventsPage
+export default EventDetail

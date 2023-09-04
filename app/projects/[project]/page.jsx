@@ -1,11 +1,9 @@
-'use client'
+import React from 'react'
 
-import { useParams } from 'next/navigation';
- 
-const ProjectsPage = ()=> {
-  const params = useParams()
-  const project = params.project;
-  return <div>Project: {project}</div>
+const ProjectDetail = () => {
+  return (
+    <div>ProjectDetail</div>
+  )
 }
 
-export default  ProjectsPage
+export default ProjectDetail

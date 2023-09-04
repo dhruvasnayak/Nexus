@@ -10,30 +10,30 @@
 
 | Component                              | Assignee | Status |
 | :------------------------------------- | :------- | :----: |
-| [Navbar](/components/Navbar.jsx)       | Aditi    |   []   |
-| [Activity](/components/Activities.jsx) | Aditi    |   []   |
-| [Project](/components/Projects.jsx)    | Sarang   |   []   |
-| [Hero](/components/Hero.jsx)           | Dhruva   |   []   |
-| [Carousel](/components/Carousel.jsx)   | Dhruva   |   []   |
-| [Sanchay](/components/Comments.jsx)    | Sanchay  |   []   |
+| [Navbar](/components/Navbar.jsx)       | Aditi    |   <input type='checkbox' />     |
+| [Activity](/components/Activities.jsx) | Aditi    |   <input type='checkbox' />     |
+| [Project](/components/Projects.jsx)    | Sarang   |   <input type='checkbox' />     |
+| [Hero](/components/Hero.jsx)           | Dhruva   |   <input type='checkbox' />     |
+| [Carousel](/components/Carousel.jsx)   | Dhruva   |   <input type='checkbox' />     |
+| [Sanchay](/components/Comments.jsx)    | Sanchay  |   <input type='checkbox' />     |
 
 ## About Us
 
 | Component                              | Assignee | Status |
 | :------------------------------------- | :------- | :----: |
-| [Discover](/components/Discover.jsx)   | Dhruva   |   []   |
-| [AboutHero](/components/AboutHero.jsx) | Dhruva   |   []   |
-| [Mentor](/components/Mentors.jsx)      | Avanish  |   []   |
-| [FAQ](/components/Faq.jsx)             | Sanchay  |   []   |
+| [Discover](/components/Discover.jsx)   | Hitesh   |   <input type='checkbox' />     |
+| [AboutHero](/components/AboutHero.jsx) | Dhruva   |   <input type='checkbox' />     |
+| [Mentor](/components/Mentors.jsx)      | Avanish  |   <input type='checkbox' />     |
+| [FAQ](/components/Faq.jsx)             | Sanchay  |   <input type='checkbox' />     |
 
 ### Project
 
-| Component                                                      | Assignee        | Status |
-| :------------------------------------------------------------- | :-------------- | :----: |
-| [Event Page](</app/(content)/events/page.jsx>)                 | Anshul & Sarang |   []   |
-| [Project Page](</app/(content)/projects/page.jsx>)             | Anshul & Sarang |   []   |
-| [Event Details](</app/(content)/events/[event]/page.jsx>)      | Dhruva          |   []   |
-| [Project Deails](</app/(content)/projects/[project]/page.jsx>) | Dhruva          |   []   |
+| Component                                          | Assignee         | Status |
+| :------------------------------------------------- | :--------------- | :----: |
+| [Event Page](/app/events/page.jsx)                 | Anshul & Sarang  |  <input type='checkbox' />    |
+| [Project Page](/app/projects/page.jsx)             | Anshul & Sarang  |   <input type='checkbox' />     |
+| [Event Details](/app/events/[event]/page.jsx)      | Revanur & Nistha |   <input type='checkbox' />     |
+| [Project Deails](/app/projects/[project]/page.jsx) | Revanur & Nistha |   <input type='checkbox' />     |
 
 ### Database
 
