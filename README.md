@@ -1,36 +1,40 @@
-[![wakatime](https://wakatime.com/badge/user/b486c624-54cb-4d61-9d41-06e9e496bcfe/project/10c219d4-e5c8-4b1c-a5e1-c5e4608f873e.svg)](https://wakatime.com/badge/user/b486c624-54cb-4d61-9d41-06e9e496bcfe/project/10c219d4-e5c8-4b1c-a5e1-c5e4608f873e)
+# NEXUS WEBSITE
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Design File
 
-## Getting Started
+[Design file](https://www.figma.com/file/ygMUbbynW1yllGO2vQtJqM/NEXUS-Web-Design?type=design&node-id=360%3A464&mode=design&t=a7Brv9pk7SAMyiFQ-1)
 
-First, run the development server:
+## Work Distribution
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Homepage
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Component                              | Assignee | Status |
+| :------------------------------------- | :------- | :----: |
+| [Navbar](/components/Navbar.jsx)       | Aditi    |   []   |
+| [Activity](/components/Activities.jsx) | Aditi    |   []   |
+| [Project](/components/Projects.jsx)    | Sarang   |   []   |
+| [Hero](/components/Hero.jsx)           | Dhruva   |   []   |
+| [Carousel](/components/Carousel.jsx)   | Dhruva   |   []   |
+| [Sanchay](/components/Comments.jsx)    | Sanchay  |   []   |
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## About Us
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Component                              | Assignee | Status |
+| :------------------------------------- | :------- | :----: |
+| [Discover](/components/Discover.jsx)   | Dhruva   |   []   |
+| [AboutHero](/components/AboutHero.jsx) | Dhruva   |   []   |
+| [Mentor](/components/Mentors.jsx)      | Avanish  |   []   |
+| [FAQ](/components/Faq.jsx)             | Sanchay  |   []   |
 
-## Learn More
+### Project
 
-To learn more about Next.js, take a look at the following resources:
+| Component                                                      | Assignee        | Status |
+| :------------------------------------------------------------- | :-------------- | :----: |
+| [Event Page](</app/(content)/events/page.jsx>)                 | Anshul & Sarang |   []   |
+| [Project Page](</app/(content)/projects/page.jsx>)             | Anshul & Sarang |   []   |
+| [Event Details](</app/(content)/events/[event]/page.jsx>)      | Dhruva          |   []   |
+| [Project Deails](</app/(content)/projects/[project]/page.jsx>) | Dhruva          |   []   |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Database
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Avanish & Anshul

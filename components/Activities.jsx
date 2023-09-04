@@ -2,7 +2,8 @@ import React from 'react'
 
 const Activities = () => {
   return (
-    <div>Activities
+    <div>
+	<h2>Activities</h2>
 	
 	<ActivityContainer />
 	<ActivityContainer />
