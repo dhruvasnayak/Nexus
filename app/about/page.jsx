@@ -18,7 +18,7 @@ const About = () => {
 			<Button size="lg" variant="outline" className='w-full' href="www.google.com">Sarang</Button>
 			<Button size="lg" variant="ghost" className='w-full' href="www.google.com">Sarang</Button>
 
-			<Mentors />
+			<Mentors/>
 			<Goals />
 			<Faq />
 		</div> 
