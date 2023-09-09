@@ -44,10 +44,10 @@ const FaqBox = () => {
       <ul>
         {data.map((item, index) => (
           <li key={item.index} className="mb-4 px-[40px]">
-            <div className="border p-2 rounded-lg">
-              <div className="flex justify-between text-md font-montserrat">
+            <div className="border p-2 rounded-lg  hover:border-blue-700">
+              <div className="flex justify-between text-md font-montserrat " onClick={() => handleToggle(index)}>
                 {item.question}
-                <button className="cursor-pointer" onClick={() => handleToggle(index)}>
+                <button className="cursor-pointer">
                   {toggles[index] ? "-" : "+"}
                 </button>
               </div>
