@@ -7,7 +7,7 @@ import Hero from "../components/Hero";
 
 export default function Home() {
 	return (
-		<main className="">
+		<main className="mx-2 sm:mx-10 md:mx-20">
 			<Navbar />
 
 			<Carousel />
