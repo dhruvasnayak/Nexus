@@ -18,7 +18,7 @@
     "clsx": "^2.0.0",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
-    "next": "13.4.19",
+    "next": "^13.4.19",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -32,5 +32,20 @@
     "prettier": "^3.0.2",
     "prettier-plugin-tailwindcss": "^0.5.3",
     "prisma": "^5.2.0"
-  }
+  },
+  "description": "[Design file](https://www.figma.com/file/ygMUbbynW1yllGO2vQtJqM/NEXUS-Web-Design?type=design&node-id=360%3A464&mode=design&t=a7Brv9pk7SAMyiFQ-1)",
+  "main": "next.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhruvasnayak/Nexus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhruvasnayak/Nexus/issues"
+  },
+  "homepage": "https://github.com/dhruvasnayak/Nexus#readme"
 }
