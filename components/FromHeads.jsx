@@ -11,7 +11,7 @@ export default function FromHeads() {
 				</span>
 			</p>
 
-			<div className="grid grid-cols-1 gap-4 phone:grid-cols-3">
+			<div className="grid grid-cols-1 gap-4 my-4 phone:grid-cols-3">
 				<div className="phone:row-start-1 phone:row-end-3 phone:col-start-1 phone:col-end-2 ">
 					<Heads
 						index="1"
