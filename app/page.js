@@ -6,19 +6,20 @@ import Comments from "../components/Comments";
 import Hero from "../components/Hero";
 
 export default function Home() {
-	return (
-		<main className="mx-2 sm:mx-10 md:mx-20">
-			<Navbar />
+  return (
+    <>
+      <Navbar />
+      <main className="mx-2 sm:mx-10 md:mx-20">
+        <Carousel />
 
-			<Carousel />
+        <Hero />
 
-			<Hero />
+        <Activities />
 
-			<Activities />
+        <Projects />
 
-			<Projects />
-
-			<Comments />
-		</main>
-	);
+        <Comments />
+      </main>
+    </>
+  );
 }

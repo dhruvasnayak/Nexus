@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+import React, {useRef} from "react";
 import Image from "next/image";
+import { Carousel } from "@mantine/carousel";
+
 const Activities = () => {
   return (
     <div>
@@ -18,13 +21,24 @@ const ActivityContainer = () => {
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4">
         {cards_desc.map((items) => (
-          <div className="flex flex-col justify-center items-center border-white/20 border-[1px] rounded-md px-3 py-2">
-            <Image
-              src={items.image}
-              height={540}
-              width={600}
-              className="rounded-md overflow-hidden aspect-video w-full"
-            />
+          <div className="flex flex-col justify-center items-center border-white/20 border-[1px] rounded-md p-2">
+            <Carousel
+              withIndicators
+              className="w-full aspect-video z-30 text-white"
+              loop
+              dragFree
+            >
+              {items.image.map((item, id) => (
+                <Carousel.Slide key={id} className="w-full">
+                  <Image
+                    src={item}
+                    height={400}
+                    width={600}
+                    className="z-20 object-cover rounded-md overflow-hidden w-full aspect-video"
+                  />
+                </Carousel.Slide>
+              ))}
+            </Carousel>
             <div className="flex items-center justify-between w-full">
               <div className="">
                 <h1 className="font-montserrat text-secondary font-bold text-lg">
@@ -49,9 +63,9 @@ const ActivityContainer = () => {
                 </div>
               </div>
             </div>
-             <h1 className="font-montserrat my-1 text-[14px] md:text-xs text-white/70">
-                {items.desc}
-              </h1>
+            <h1 className="font-montserrat my-1 text-[14px] md:text-xs text-white/70">
+              {items.desc}
+            </h1>
           </div>
         ))}
       </div>
@@ -62,7 +76,13 @@ const ActivityContainer = () => {
 export const cards_desc = [
   {
     id: 1,
-    image: "/images/events/unsplash_-HIiNFXcbtQ.png",
+    image: [
+      "/images/events/unsplash_-HIiNFXcbtQ.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_XtUd5SiX464.png",
+      "/images/events/unsplash_Wa9ilX9XYOI.png",
+    ],
     date: "Fri,27 Dec,2022",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
     likes: 2,
@@ -71,7 +91,13 @@ export const cards_desc = [
   },
   {
     id: 2,
-    image: "/images/events/unsplash_fT49QnFucQ8.png",
+    image: [
+      "/images/events/unsplash_-HIiNFXcbtQ.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_XtUd5SiX464.png",
+      "/images/events/unsplash_Wa9ilX9XYOI.png",
+    ],
     date: "Fri,22 Dec,2022",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
     likes: 3,
@@ -80,7 +106,13 @@ export const cards_desc = [
   },
   {
     id: 3,
-    image: "/images/events/unsplash_fT49QnFucQ8.png",
+    image: [
+      "/images/events/unsplash_-HIiNFXcbtQ.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_XtUd5SiX464.png",
+      "/images/events/unsplash_Wa9ilX9XYOI.png",
+    ],
     date: "Fri,29 Dec,2022",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
     likes: 9,
@@ -89,7 +121,13 @@ export const cards_desc = [
   },
   {
     id: 4,
-    image: "/images/events/unsplash_l5Tzv1alcps.png",
+    image: [
+      "/images/events/unsplash_-HIiNFXcbtQ.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_XtUd5SiX464.png",
+      "/images/events/unsplash_Wa9ilX9XYOI.png",
+    ],
     date: "Fri,28 Apr,2022",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
     likes: 9,
@@ -98,7 +136,13 @@ export const cards_desc = [
   },
   {
     id: 5,
-    image: "/images/events/unsplash_Wa9ilX9XYOI.png",
+    image: [
+      "/images/events/unsplash_-HIiNFXcbtQ.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_XtUd5SiX464.png",
+      "/images/events/unsplash_Wa9ilX9XYOI.png",
+    ],
     date: "Fri,27 Dec,2022",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
     likes: 4,
@@ -106,8 +150,14 @@ export const cards_desc = [
     heart: "/images/icons/blue-heart.svg",
   },
   {
-    id: 1,
-    image: "/images/events/unsplash_XtUd5SiX464.png",
+    id: 6,
+    image: [
+      "/images/events/unsplash_-HIiNFXcbtQ.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_fT49QnFucQ8.png",
+      "/images/events/unsplash_XtUd5SiX464.png",
+      "/images/events/unsplash_Wa9ilX9XYOI.png",
+    ],
     date: "Fri,27 Dec,2022",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
     likes: 2,
