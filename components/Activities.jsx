@@ -1,5 +1,5 @@
 "use client";
-import React, {useRef} from "react";
+import React from "react";
 import Image from "next/image";
 import { Carousel } from "@mantine/carousel";
 
@@ -20,9 +20,11 @@ const ActivityContainer = () => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4">
-        {cards_desc.map((items) => (
-          <div className="flex flex-col justify-center items-center border-white/20 border-[1px] rounded-md p-2">
-            <Carousel
+        {cards_desc.map((items,i) => (
+          <div className="flex flex-col justify-center items-center border-white/20 border-[1px] rounded-md p-2" key={i}>
+            
+            <Carousel 
+            
               withIndicators
               className="w-full aspect-video z-30 text-white"
               loop
