@@ -60,14 +60,14 @@ const ProjectContainer = ({
 				alt={projectName}
 				className="z-20 object-cover rounded-md overflow-hidden w-full aspect-video"
 			/>
-			<p className="font-montserrat my-1 text-[14px] md:text-xs text-white/70">
+			<p className="font-montserrat my-1 text-sm md:text-base text-white/70">
 				{summary}
 			</p>
 			<div className="flex items-center justify-between w-full sm:mx-2">
 				<span className="border-white/10 border-[1px] font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
 					<Link
 						className="group flex gap-x-3 hover:gap-x-4 items-center"
-						href={`/preojects/${id}`}
+						href={`/projects/${id}`}
 					>
 						<span className="text-[12px]">Learn More</span>
 						<Image
