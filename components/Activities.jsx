@@ -18,7 +18,7 @@ export default Activities;
 const ActivityContainer = () => {
 	return (
 		<>
-			<div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-3">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 				{cards_desc.map((item, i) => (
 					<div
 						className="flex flex-col gap-y-1 justify-center items-center border-white/20 border-[1px] rounded-md p-2"
@@ -51,7 +51,7 @@ const ActivityContainer = () => {
 								<h1 className="font-montserrat bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text font-bold text-lg">
 									{item.event}
 								</h1>
-								<h3 className="font-montserrat text-[10px] font-medium tracking-wider">
+								<h3 className="font-montserrat text-xs font-medium tracking-wider">
 									{item.date.toLocaleDateString("en-GB")}
 								</h3>
 							</div>

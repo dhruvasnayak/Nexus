@@ -4,7 +4,7 @@ import Menu from "./Menu";
 const Navbar = () => {
   return (
     <>
-      <div className="h-16 flex items-center lg:gap-72 border-b-2 border-secondary/50 justify-between  lg:w-full">
+      <div className="h-16 px-4 flex items-center lg:gap-72 border-b-2 border-secondary/40 border-[1px] justify-between  lg:w-full">
         <div className="md:hidden">
           <Menu />
         </div>
