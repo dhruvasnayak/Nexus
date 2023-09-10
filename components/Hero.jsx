@@ -10,7 +10,7 @@ const Hero = () => {
         <Link className='border-solid border-[1px] py-1  mx-[10px] px-[15px] rounded-[5px] text-black bg-white' href='/about'>
           click me
         </Link>
-        <Link className='border-solid mx-[10px] py-[3px] px-[6px] rounded-[5px] bg-secondary' href='/about'>
+        <Link className='border-solid mx-[10px] py-1 px-[6px] rounded-[5px] bg-secondary' href='/about'>
           click button
         </Link>
       </div>
