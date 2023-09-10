@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const Projects = () => {
 	return (
@@ -34,8 +35,9 @@ const ProjectContainer = ({
 	summary,
 	links,
 }) => {
+	const [openDesc, setOpenDesc] = useState(false);
 	return (
-		<div className="flex flex-col gap-y-3 justify-center items-center border-white/10 border-[1px] rounded-md p-3">
+		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-start items-center border-white/10 border-[1px] rounded-md p-3">
 			<div className="flex justify-between items-center w-full px-0 md:px-1">
 				<div className="flex items-center gap-x-2 sm:gap-x-4">
 					<Image
@@ -65,9 +67,6 @@ const ProjectContainer = ({
 				alt={projectName}
 				className="z-20 object-cover rounded-md overflow-hidden w-full aspect-video"
 			/>
-			<p className="font-montserrat my-1 text-xs md:text-sm text-white/70">
-				{summary}
-			</p>
 			<div className="flex items-center justify-between w-full sm:mx-2">
 				<span className="border-white/10 border-[1px] font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
 					<Link
@@ -100,8 +99,31 @@ const ProjectContainer = ({
 							<span className="sr-only">{link.name} link</span>
 						</a>
 					))}
+					<button
+						className="p-1.5  border-[1px] border-white/20 hover:bg-gray-900 rounded font-montserrat text-[10px] font-medium tracking-wider"
+						onClick={() => setOpenDesc((prev) => !prev)}
+					>
+						<Image
+							src="/images/icons/cross.svg"
+							width={16}
+							height={16}
+							alt="open description"
+							className={`transition-all ${
+								openDesc ? "rotate-45" : ""
+							} transform `}
+						/>
+					</button>
 				</div>
 			</div>
+			{openDesc && (
+				<p
+					className={`${
+						openDesc ? "text-white/70" : "text-transparent"
+					} duration-1000 transition-all font-montserrat my-1 text-xs sm:text-sm md:text-sm line-clamp-3`}
+				>
+					{summary}
+				</p>
+			)}
 		</div>
 	);
 };
