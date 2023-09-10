@@ -5,8 +5,13 @@ import React from "react";
 const Projects = () => {
 	return (
 		<div>
-			Projects
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<h1 className="font-bold text-2xl font-montserrat my-3">
+				Our
+				<span className="font-bold ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
+					Projects
+				</span>
+			</h1>
+			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
 				{project_data.map((project) => (
 					<ProjectContainer
 						key={project.id}
@@ -30,7 +35,7 @@ const ProjectContainer = ({
 	links,
 }) => {
 	return (
-		<div className="flex flex-col gap-y-3 justify-center items-center border-white/20 border-[1px] rounded-md p-3">
+		<div className="flex flex-col gap-y-3 justify-center items-center border-white/10 border-[1px] rounded-md p-3">
 			<div className="flex justify-between items-center w-full px-0 md:px-1">
 				<div className="flex items-center gap-x-2 sm:gap-x-4">
 					<Image
@@ -38,7 +43,7 @@ const ProjectContainer = ({
 						height={150}
 						width={150}
 						alt="Project 1"
-						className="w-10 h-10 md:w-12 md:h-12 object-cover"
+						className="border-[1px] border-white/20 w-10 h-10 md:w-12 md:h-12 object-cover rounded-md"
 					/>
 					<h1 className="font-montserrat font-extrabold italic text-xl">
 						{projectName}
@@ -60,7 +65,7 @@ const ProjectContainer = ({
 				alt={projectName}
 				className="z-20 object-cover rounded-md overflow-hidden w-full aspect-video"
 			/>
-			<p className="font-montserrat my-1 text-sm md:text-base text-white/70">
+			<p className="font-montserrat my-1 text-xs md:text-sm text-white/70">
 				{summary}
 			</p>
 			<div className="flex items-center justify-between w-full sm:mx-2">
@@ -69,7 +74,7 @@ const ProjectContainer = ({
 						className="group flex gap-x-3 hover:gap-x-4 items-center"
 						href={`/projects/${id}`}
 					>
-						<span className="text-[12px]">Learn More</span>
+						<span className="text-xs">Learn More</span>
 						<Image
 							src="/images/icons/right-arrow.svg"
 							width={30}
@@ -104,12 +109,12 @@ const ProjectContainer = ({
 const project_data = [
 	{
 		id: 1,
-		projectThumbnail: "/images/project-icon/OFAAX40 1.png",
+		projectThumbnail: "/images/project-icon/notevault-thumbnail.png",
 		projectName: "NoteVault",
 		domain: { short: "Web dev", long: "Web Development" },
-		projectImage: "/images/events/unsplash_-HIiNFXcbtQ.png",
+		projectImage: "/images/projects/note-vault-preview.png",
 		summary:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur qui",
+			"NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.",
 		links: [
 			{
 				name: "Github",
@@ -125,10 +130,10 @@ const project_data = [
 	},
 	{
 		id: 2,
-		projectThumbnail: "/images/project-icon/OFAAX40 11.png",
+		projectThumbnail: "/images/project-icon/nexus-website-thumbnail.png",
 		projectName: "Nexus Website",
 		domain: { short: "Web dev", long: "Web Development" },
-		projectImage: "/images/events/unsplash_-HIiNFXcbtQ.png",
+		projectImage: "/images/projects/nexus-website-preview.png",
 		summary:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur qui",
 		links: [

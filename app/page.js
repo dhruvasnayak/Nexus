@@ -9,15 +9,11 @@ export default function Home() {
 	return (
 		<>
 			<Navbar />
-			<main className="mx-2 sm:mx-14 md:mx-28">
+			<main className="mx-2 sm:mx-14 md:mx-28 flex flex-col gap-y-8 md:gap-y-14">
 				<Carousel />
-
 				<Hero />
-
-				<Activities />
-
 				<Projects />
-
+				<Activities />
 				<FromHeads />
 			</main>
 		</>

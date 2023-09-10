@@ -7,9 +7,14 @@ import Link from "next/link";
 const Activities = () => {
 	return (
 		<div>
-			<h2>Activities</h2>
+			<h1 className="font-bold text-2xl font-montserrat my-3">
+				Our
+				<span className="font-bold ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
+					Activities
+				</span>
+			</h1>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
 				{activity_data.map((activity) => (
 					<ActivityContainer
 						key={activity.i}
@@ -23,9 +28,9 @@ const Activities = () => {
 
 export default Activities;
 
-const ActivityContainer = ({ id, images, date, desc, eventName, likes }) => {
+const ActivityContainer = ({ id, images, date, summary, eventName, likes }) => {
 	return (
-		<div className="flex flex-col gap-y-1 justify-center items-center border-white/20 border-[1px] rounded-md p-2 sm:p-3">
+		<div className="flex flex-col gap-y-1 justify-center items-center border-white/10 border-[1px] rounded-md p-2 sm:p-3">
 			<Carousel
 				withIndicators
 				className="w-full aspect-video z-30 text-white"
@@ -72,8 +77,8 @@ const ActivityContainer = ({ id, images, date, desc, eventName, likes }) => {
 					</div>
 				</div>
 			</div>
-			<p className="font-montserrat my-1 text-xs sm:text-sm text-white/70">
-				{desc}
+			<p className="font-montserrat line-clamp-3 my-1 text-xs sm:text-sm text-white/70">
+				{summary}
 			</p>
 			<div className="flex items-center justify-between w-full sm:mx-2">
 				<span className="border-white/10 border-[1px] font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
@@ -108,7 +113,7 @@ export const activity_data = [
 			"/images/events/unsplash_XtUd5SiX464.png",
 		],
 		date: new Date("Sep 9, 2023 9:00:00"),
-		desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
+		summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
 		likes: 2,
 		eventName: "NexHunt",
 	},
@@ -123,7 +128,7 @@ export const activity_data = [
 			"/images/events/unsplash_XtUd5SiX464.png",
 		],
 		date: new Date("Sep 9, 2023 9:00:00"),
-		desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
+		summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
 		likes: 3,
 		eventName: "NeuroNex",
 	},
@@ -138,7 +143,7 @@ export const activity_data = [
 			"/images/events/unsplash_XtUd5SiX464.png",
 		],
 		date: new Date("Sep 9, 2023 9:00:00"),
-		desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
+		summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
 		likes: 9,
 		eventName: "NexHunt",
 	},
@@ -153,7 +158,7 @@ export const activity_data = [
 			"/images/events/unsplash_XtUd5SiX464.png",
 		],
 		date: new Date("Sep 9, 2023 9:00:00"),
-		desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
+		summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
 		likes: 9,
 		eventName: "NeuroNex",
 	},
@@ -168,7 +173,7 @@ export const activity_data = [
 			"/images/events/unsplash_XtUd5SiX464.png",
 		],
 		date: new Date("Sep 9, 2023 9:00:00"),
-		desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
+		summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
 		likes: 4,
 		eventName: "NexHunt",
 	},
@@ -183,7 +188,7 @@ export const activity_data = [
 			"/images/events/unsplash_XtUd5SiX464.png",
 		],
 		date: new Date("Sep 9, 2023 9:00:00"),
-		desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
+		summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur quis",
 		likes: 2,
 		eventName: "NeuroNex",
 	},
