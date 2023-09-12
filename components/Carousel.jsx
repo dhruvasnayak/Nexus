@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import './Carousel.css'
 
@@ -25,21 +25,21 @@ const Carouseld = () => {
   ];
   const settings = {
     dots: true,
-    autoFocus:false,
-    emulateTouch:true,
-    showArrows:true,
-    showStatus:false,
-    transitionTime:700,
-    useKeyboardArrows:true,
-    
+    autoFocus: false,
+    emulateTouch: true,
+    showArrows: true,
+    showStatus: false,
+    transitionTime: 700,
+    useKeyboardArrows: true,
+
   }
   return (
     <div className='flex justify-center flex-col items-center'>
       <div className="carousel-container">
-        <Carousel {...settings} className='mt-6'>
+        <Carousel {...settings} className='mt-6 '>
           {images.map((item) => (
             <div key={item.id}>
-              <img className='w-[1247px] h-[450px]' src={item.src} alt={item.alt} />
+              <img className='md:w-1/2 w-full' src={item.src} alt={item.alt} />
             </div>
           ))}
         </Carousel>
