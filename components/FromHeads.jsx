@@ -3,17 +3,16 @@ import React from "react";
 
 export default function FromHeads() {
 	return (
-		<div className="p-10">
-			<p className="text-2xl text-center font-semibold font-montserrat my-4 md:text-start text-white text-transparent">
+		<div className="phone:p-1 my-6 p-[0.5]">
+			<p className="text-2xl font-semibold font-montserrat  text-white text-transparent">
 				From Our
-				<span className="text-2xl text-center md:text-start font-semibold font-montserrat my-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-					{" "}
-					Heads
+				<span className="text-2xl  font-semibold font-montserrat my-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+					{" "}Heads
 				</span>
 			</p>
 
-			<div className="grid grid-cols-3 gap-4">
-				<div className="row-start-1 row-end-3 col-start-1 col-end-2 ">
+			<div className="grid grid-cols-1 gap-4 my-4 phone:grid-cols-3">
+				<div className="phone:row-start-1 phone:row-end-3 phone:col-start-1 phone:col-end-2 ">
 					<Heads
 						index="1"
 						img="/images/project-icon/OFAAX40 11.png"
@@ -22,7 +21,7 @@ export default function FromHeads() {
 						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! "
 					/>
 				</div>
-				<div className="row-start-1 row-end-4 col-start-2 col-end-3">
+				<div className="phone:row-start-1 phone:row-end-4 phone:col-start-2 phone:col-end-3">
 					<Heads
 						index="2"
 						img="/images/project-icon/OFAAX40 12.png"
@@ -37,7 +36,7 @@ export default function FromHeads() {
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! "
 					/>
 				</div>
-				<div className="row-start-1 row-end-2 col-start-3 col-end-4">
+				<div className="phone:row-start-1 phone:row-end-2 phone:col-start-3 phone:col-end-4">
 					<Heads
 						index="3"
 						img="/images/project-icon/OFAAX40 1.png"
@@ -46,7 +45,7 @@ export default function FromHeads() {
 						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
 					/>
 				</div>
-				<div className="row-start-3 row-end-4 col-start-1 col-end-2">
+				<div className="phone:row-start-3 phone:row-end-4 phone:col-start-1 phone:col-end-2">
 					<Heads
 						index="4"
 						img="/images/project-icon/OFAAX40 11.png"
@@ -55,7 +54,7 @@ export default function FromHeads() {
 						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
 					/>
 				</div>
-				<div className="row-start-2 row-end-4 col-start-3 col-end-4">
+				<div className="phone:row-start-2 phone:row-end-4 phone:col-start-3 phone:col-end-4">
 					<Heads
 						index="5"
 						img="/images/project-icon/OFAAX40 12.png"
@@ -64,7 +63,7 @@ export default function FromHeads() {
 						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
 					/>
 				</div>
-				<div className="row-start-4 row-end-6 col-start-1 col-end-2">
+				<div className="phone:row-start-4 phone:row-end-6 phone:col-start-1 phone:col-end-2">
 					<Heads
 						index="6"
 						img="/images/project-icon/OFAAX40 1.png"
@@ -73,7 +72,7 @@ export default function FromHeads() {
 						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
 					/>
 				</div>
-				<div className="row-start-4 row-end-6 col-start-2 col-end-3">
+				<div className="phone:row-start-4 phone:row-end-6 phone:col-start-2 phone:col-end-3">
 					<Heads
 						index="7"
 						img="/images/project-icon/OFAAX40 11.png"
@@ -82,7 +81,7 @@ export default function FromHeads() {
 						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque "
 					/>
 				</div>
-				<div className="row-start-[3.5] row-end-5 col-start-3 col-end-4">
+				<div className="phone:row-start-[3.5] phone:row-end-5 phone:col-start-3 phone:col-end-4">
 					<Heads
 						index="8"
 						img="/images/project-icon/OFAAX40 12.png"
@@ -99,7 +98,7 @@ export default function FromHeads() {
 const Heads = (props) => {
 	return (
 		<>
-			<article className="border border-gray-500 rounded-2xl p-6 hover:border-blue-700">
+			<article className="border-2 border-gray-500 rounded-2xl phone:p-6 p-3 hover:border-blue-700">
 				<div className="flex gap-2 bg bg-background font-montserrat">
 					<Image
 						height={100}
@@ -108,7 +107,7 @@ const Heads = (props) => {
 						alt="Profile Pic"
             className="h-12 w-12"
 					/>
-					<article className="hidden md:flex flex-col">
+					<article className="flex flex-col">
 						<p className="text-md font-bold md:text-lg">
 							{props.name}
 						</p>
