@@ -21,6 +21,18 @@ const Carouseld = () => {
     src: "https://www.hostgator.com/blog/wp-content/uploads/2021/03/How-to-Make-a-Website-Quickly.jpg",
 
     alt: "Image 3"
+  },
+  {
+    id: 4,
+    src: "https://www.hostgator.com/blog/wp-content/uploads/2021/03/How-to-Make-a-Website-Quickly.jpg",
+
+    alt: "Image 4"
+  },
+  {
+    id: 5,
+    src: "https://www.hostgator.com/blog/wp-content/uploads/2021/03/How-to-Make-a-Website-Quickly.jpg",
+
+    alt: "Image 5"
   }
   ];
   const settings = {
@@ -31,6 +43,9 @@ const Carouseld = () => {
     showStatus: false,
     transitionTime: 700,
     useKeyboardArrows: true,
+    autoPlay:true,
+    interval:1300,
+
 
   }
   return (
@@ -39,7 +54,7 @@ const Carouseld = () => {
         <Carousel {...settings} className='mt-6 '>
           {images.map((item) => (
             <div key={item.id}>
-              <img className='md:w-1/2 w-full' src={item.src} alt={item.alt} />
+              <img className='md:w-1/2 w-full round-10' src={item.src} alt={item.alt} />
             </div>
           ))}
         </Carousel>
