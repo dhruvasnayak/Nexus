@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Discover = () => {
   return (
@@ -9,7 +10,10 @@ const Discover = () => {
       </div>
       <div className='grid md:grid-cols-4 grid-cols-1 gap-4 justify-center mt-[60px] items-center'>
         <div className='border-solid mx-5 border-[1px] rounded-lg border-white h-[200px] w-[200px]'>
-          <div className='relative top-[120px] left-[20px]'>
+          <div className='w-1/2 border-solid border-[1px] rounded-[5px]'>
+          <Image src="/images/icons/leaf.svg"  width={100} height={100}></Image>
+          </div>
+          <div className='relative top-[30px] left-[20px]'>
             <p className='font-bold text-[20px]' >History</p>
             <p className='text-[10px]'>Let&apos;s see what we have done</p>
           </div>
