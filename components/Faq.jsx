@@ -54,7 +54,7 @@ const FaqBox = () => {
                 
 
               <button
-						className="p-1.5  border-[1px] border-white/20 hover:bg-gray-900 rounded font-montserrat text-[10px] font-medium tracking-wider"
+						className="p-1.5   hover:bg-gray-900 rounded font-montserrat text-[10px] font-medium tracking-wider"
 						onClick={() => toggles[index]}
 					>
 						<Image
