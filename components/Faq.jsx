@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Image from "next/image";
 
 const Faq = () => {
 	return (
@@ -46,12 +47,27 @@ const FaqBox = () => {
       <ul>
         {data.map((item, index) => (
           <li key={item.index} className="mb-4 px-6">
-            <div className="border p-2 rounded-lg  hover:border-blue-700">
+            <div className="border-[1px] border-white/20  p-2 rounded-lg  hover:border-blue-700 hover:bg-gray-900">
               <div className="flex justify-between text-md font-montserrat " onClick={() => handleToggle(index)}>
                 {item.question}
-                <button className="cursor-pointer">
-                  {toggles[index] ? "-" : "+"}
-                </button>
+                
+                
+
+              <button
+						className="p-1.5  border-[1px] border-white/20 hover:bg-gray-900 rounded font-montserrat text-[10px] font-medium tracking-wider"
+						onClick={() => toggles[index]}
+					>
+						<Image
+							src="/images/icons/cross.svg"
+							width={10}
+							height={10}
+							alt="open description"
+							className={`transition-all ${
+								toggles[index] ? "rotate-45" : ""
+							} transform `}
+						/>
+					</button>
+
               </div>
 
               <div>
