@@ -9,7 +9,7 @@ const Hero = () => {
       <p className='text-[50px] leading-[65px] font-montserrat font-black text-[#009EFD] '>NEXUS CLUB</p>
       <div className='mt-5'>
   
-        <Button className="px-5 mx-5 text-black bg-white " href='/about'>click me</Button>
+        <Button className="px-[22px] mx-5 text-black bg-white " href='/about'>click me</Button>
         <Button href='/about'>click button</Button>
 
       </div>
