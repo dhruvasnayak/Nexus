@@ -2,77 +2,68 @@ import Image from "next/image";
 import React from "react";
 
 const head_data = [
-	{
-		imageUrl: "/images/project-icon/OFAAX40 12.png",
-		name: "Name 1",
-		domain: "EVM",
-		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
-	},
-	{
-		imageUrl: "/images/project-icon/OFAAX40 12.png",
-		name: "Name 1",
-		domain: "EVM 2",
-		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit quibu",
-	},
-	{
-		imageUrl: "/images/project-icon/OFAAX40 12.png",
-		name: "Name 1",
-		domain: "EVM 3",
-		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
-	},
-	{
-		imageUrl: "/images/project-icon/OFAAX40 12.png",
-		name: "Name 1",
-		domain: "EVM 4",
-		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
-	},
-	{
-		imageUrl: "/images/project-icon/OFAAX40 12.png",
-		name: "Name 1",
-		domain: "EVM 5",
-		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, q Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
-	},
-	{
-		imageUrl: "/images/project-icon/OFAAX40 12.png",
-		name: "Name 1",
-		domain: "EVM 6",
-		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
-	},
-	{
-		imageUrl: "/images/project-icon/OFAAX40 12.png",
-		name: "Name 1",
-		domain: "EVM 7",
-		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
-	},
-	{
-		imageUrl: "/images/project-icon/OFAAX40 12.png",
-		name: "Name 1 8",
-		domain: "EVM 8",
-		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
-	},
-	{
-		imageUrl: "/images/project-icon/OFAAX40 12.png",
-		name: "Name 1",
-		domain: "EVM 9",
-		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
-	},
-	{
-		imageUrl: "/images/project-icon/OFAAX40 12.png",
-		name: "Name 1",
-		domain: "EVM 9",
-		message:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaq orem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
-	},
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "John Doe",
+        domain: "EVM 1",
+        message: "I'm passionate about exploring the latest developments in EVM technology and how it's reshaping the future. Join me in discussing its impact on various industries."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Jane Smith",
+        domain: "EVM 2",
+        message: "Let's delve into the world of decentralized finance and its role in transforming traditional financial systems. Your insights on EVM 2 are highly valued."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Alice Johnson",
+        domain: "EVM 3",
+        message: "Exploring the potential of blockchain technology beyond cryptocurrencies is my passion. EVM 3 is the place to share ideas and innovations."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Bob Wilson",
+        domain: "EVM 4",
+        message: "Let's discuss the real-world applications of EVM 4 in supply chain management. Your expertise will contribute to a lively conversation."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Emily Davis",
+        domain: "EVM 5",
+        message: "EVM 5 is your gateway to understanding the intersection of art and technology. Join me in exploring how EVM is transforming the creative industries."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Michael Brown",
+        domain: "EVM 6",
+        message: "Let's unravel the mysteries of smart contracts and their potential in EVM 6. Your insights could pave the way for groundbreaking innovations."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Olivia Wilson",
+        domain: "EVM 7",
+        message: "I'm fascinated by the environmental implications of EVM 7. Join the discussion on sustainable blockchain solutions and their impact on the planet."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Daniel Lee",
+        domain: "EVM 8",
+        message: "EVM 8 is where we explore the future of finance. Share your thoughts on DeFi, NFTs, and more as we shape the financial landscape together."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Sophia Clark",
+        domain: "EVM 9",
+        message: "Join EVM 9 to discuss the latest trends in blockchain security. Your expertise will help us navigate the evolving landscape of digital trust."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "William Adams",
+        domain: "EVM 10",
+        message: "EVM 10 is your hub for exploring the role of blockchain in healthcare. Let's envision a healthier future together through innovative solutions."
+    }
 ];
+
 
 export default function FromHeads() {
 	return (
