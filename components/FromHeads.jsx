@@ -14,8 +14,8 @@ export default function FromHeads() {
 			
 
 			
-			 {/* <div className=" grid grid-cols-1 grid-flow-row-dense gap-4 my-4 phone:grid-cols-3 ">	 */}
-			 <div className=" grid grid-cols-1 grid-flow-row-dense gap-4 my-4">
+			 <div className=" grid grid-cols-1 grid-flow-row-dense gap-4 my-4 phone:grid-cols-3 ">	
+			 {/* <div className=" grid grid-cols-1 grid-flow-row-dense gap-4 my-4"> */}
 			 
 				 {
 					data.map((item,index) => (
