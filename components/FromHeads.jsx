@@ -1,6 +1,79 @@
 import Image from "next/image";
 import React from "react";
 
+const head_data = [
+	{
+		imageUrl: "/images/project-icon/OFAAX40 12.png",
+		name: "Name 1",
+		domain: "EVM",
+		message:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
+	},
+	{
+		imageUrl: "/images/project-icon/OFAAX40 12.png",
+		name: "Name 1",
+		domain: "EVM 2",
+		message:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit quibu",
+	},
+	{
+		imageUrl: "/images/project-icon/OFAAX40 12.png",
+		name: "Name 1",
+		domain: "EVM 3",
+		message:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
+	},
+	{
+		imageUrl: "/images/project-icon/OFAAX40 12.png",
+		name: "Name 1",
+		domain: "EVM 4",
+		message:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
+	},
+	{
+		imageUrl: "/images/project-icon/OFAAX40 12.png",
+		name: "Name 1",
+		domain: "EVM 5",
+		message:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, q Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
+	},
+	{
+		imageUrl: "/images/project-icon/OFAAX40 12.png",
+		name: "Name 1",
+		domain: "EVM 6",
+		message:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
+	},
+	{
+		imageUrl: "/images/project-icon/OFAAX40 12.png",
+		name: "Name 1",
+		domain: "EVM 7",
+		message:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
+	},
+	{
+		imageUrl: "/images/project-icon/OFAAX40 12.png",
+		name: "Name 1 8",
+		domain: "EVM 8",
+		message:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
+	},
+	{
+		imageUrl: "/images/project-icon/OFAAX40 12.png",
+		name: "Name 1",
+		domain: "EVM 9",
+		message:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
+	},
+	{
+		imageUrl: "/images/project-icon/OFAAX40 12.png",
+		name: "Name 1",
+		domain: "EVM 9",
+		message:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaq orem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu",
+	},
+];
+
 export default function FromHeads() {
 	return (
 		<div className="p-10">
@@ -12,85 +85,14 @@ export default function FromHeads() {
 				</span>
 			</p>
 
-			<div className="grid grid-cols-3 gap-4">
-				<div className="row-start-1 row-end-3 col-start-1 col-end-2 ">
+			<div className="xl:columns-4 lg:columns-3 columns-1 sm:columns-2 gap-4 mx-auto space-y-3 pb-28">
+				{/* <div className="bg-gray-200 break-inside-avoi"></div> */}
+				{head_data.map((head) => (
 					<Heads
-						index="1"
-						img="/images/project-icon/OFAAX40 11.png"
-						name="Wade Warren"
-						domain="Head"
-						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! "
+						key={head.domain}
+						{...head}
 					/>
-				</div>
-				<div className="row-start-1 row-end-4 col-start-2 col-end-3">
-					<Heads
-						index="2"
-						img="/images/project-icon/OFAAX40 12.png"
-						name="Cameron Williamson"
-						domain="Operation Head"
-						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! "
-					/>
-				</div>
-				<div className="row-start-1 row-end-2 col-start-3 col-end-4">
-					<Heads
-						index="3"
-						img="/images/project-icon/OFAAX40 1.png"
-						name="Guy Hawkins"
-						domain="web Dev Head"
-						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
-					/>
-				</div>
-				<div className="row-start-3 row-end-4 col-start-1 col-end-2">
-					<Heads
-						index="4"
-						img="/images/project-icon/OFAAX40 11.png"
-						name="Esther Howard"
-						domain="Design HEad"
-						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
-					/>
-				</div>
-				<div className="row-start-2 row-end-4 col-start-3 col-end-4">
-					<Heads
-						index="5"
-						img="/images/project-icon/OFAAX40 12.png"
-						name="ROnald Richards"
-						domain="Logistic Head"
-						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
-					/>
-				</div>
-				<div className="row-start-4 row-end-6 col-start-1 col-end-2">
-					<Heads
-						index="6"
-						img="/images/project-icon/OFAAX40 1.png"
-						name="Esther Howard"
-						domain="PR Head"
-						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
-					/>
-				</div>
-				<div className="row-start-4 row-end-6 col-start-2 col-end-3">
-					<Heads
-						index="7"
-						img="/images/project-icon/OFAAX40 11.png"
-						name="Savannah Nguyen"
-						domain="Technical Head"
-						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque "
-					/>
-				</div>
-				<div className="row-start-[3.5] row-end-5 col-start-3 col-end-4">
-					<Heads
-						index="8"
-						img="/images/project-icon/OFAAX40 12.png"
-						name="Robert Fox"
-						domain="Finance Head"
-						msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu"
-					/>
-				</div>
+				))}
 			</div>
 		</div>
 	);
@@ -98,29 +100,25 @@ export default function FromHeads() {
 
 const Heads = (props) => {
 	return (
-		<>
-			<article className="border border-gray-500 rounded-2xl p-6 hover:border-blue-700">
-				<div className="flex gap-2 bg bg-background font-montserrat">
-					<Image
-						height={100}
-						width={100}
-						src={props.img}
-						alt="Profile Pic"
-            className="h-12 w-12"
-					/>
-					<article className="hidden md:flex flex-col">
-						<p className="text-md font-bold md:text-lg">
-							{props.name}
-						</p>
-						<p className="text-sm font-extralight text-text-secondary">
-							{props.domain}
-						</p>
-					</article>
-				</div>
-				<div className="bg bg-shaded text-sm mt-4">
-					<p>{props.msg}</p>
-				</div>
-			</article>
-		</>
+		<article className="transition-colors break-inside-avoid  border-white/10 border-[1px] rounded-md p-4 hover:border-primary">
+			<div className="flex gap-2 bg bg-background font-montserrat">
+				<Image
+					height={100}
+					width={100}
+					src={props.imageUrl}
+					alt="Profile Pic"
+					className="h-12 w-12"
+				/>
+				<article className="hidden md:flex flex-col">
+					<h2 className="text-base font-bold md:text-lg font-poppins">{props.name}</h2>
+					<p className="text-xs font-medium tracking-wide font-poppins text-text-secondary">
+						{props.domain}
+					</p>
+				</article>
+			</div>
+			<div className="bg bg-shaded text-sm mt-4">
+				<p>{props.message}</p>
+			</div>
+		</article>
 	);
 };
