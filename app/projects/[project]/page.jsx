@@ -25,65 +25,89 @@ const ProjectDetail = ({ params }) => {
 
 	// console.log(project);
 
-
 	if (!project) {
 		return (
 			<div className=" text-3xl h-screen flex justify-center items-center">
-				Sorry, but the project you are looking for does not exist yet
+				Sorry, but the project
+				you are looking for does
+				not exist yet
 			</div>
-		)
+		);
 	}
 
 	return (
 		<div className="w-full">
 			<div className="flex flex-col justify-between items-center  ">
-				<div className="sm:text-8xl font-montserrat font-extrabold border-b-2 w-full flex justify-between">
-			
-				<Image src={project.projectThumbnail} className="w-8 sm:w-24" alt="thumbnail" width={100} height={50}></Image>				  
-				{project.projectName}
+				<div className="sm:text-8xl font-montserrat font-extrabold border-b-2 w-full flex justify-between p-4">
+					<Image
+						src={
+							project.projectThumbnail
+						}
+						className="w-8 sm:w-24"
+						alt="thumbnail"
+						width={100}
+						height={50}
+					></Image>
+					{
+						project.projectName
+					}
 				</div>
 				<div className="m-8">
-
-				<Image
-					src={
-						project.projectImage
-					}
-					alt="project-image"
-					className="rounded-xl w-full border-double border-2 hover:shadow-lg hover:shadow-primary "
-					width={1050}
-					height={150}
+					<Image
+						src={
+							project.projectImage
+						}
+						alt="project-image"
+						className="rounded-xl w-full border-double border-2 hover:shadow-lg hover:shadow-primary "
+						width={1050}
+						height={150}
 					/>
-					</div>
+				</div>
 				<div className="m-8 font-montserrat">
 					{project.summary}
 				</div>
 			</div>
 			<div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-2 p-5 m-8 rounded-md">
-			<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-secondary hover:text-black">
+				<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-secondary hover:text-black">
 					Domain:{" "}
 					<div>
-					{
-						project.domain
-							.long
+						{
+							project
+								.domain
+								.long
+						}
+					</div>
+				</div>
+				<Link
+					href={
+						project.links[0]
+							.link
 					}
+				>
+					<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-secondary hover:text-black">
+						Github:{" "}
+						<div>
+							{
+								project.projectName
+							}
+						</div>
 					</div>
-				</div>
-				<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-secondary hover:text-black">
-					Github:{" "}
-					<div>
-					<Link href={project.links[0].link}>
-						{project.projectName}
-					</Link>
+				</Link>
+				<Link
+					href={
+						project.links[1]
+							.link
+					}
+				>
+					<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-secondary hover:text-black">
+						Deployed Site:{" "}
+						<div>
+							{
+								project.projectName
+							}
+						</div>
 					</div>
-				</div>
-				<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-secondary hover:text-black">
-					Deployed Site:{" "}
-					<div>
-					<Link href={project.links[1].link}>
-					{project.projectName}
-					</Link>
-					</div>
-				</div>
+				</Link>
 			</div>
 		</div>
 	);
