@@ -35,42 +35,54 @@ const ProjectDetail = ({ params }) => {
 	}
 
 	return (
-		<div className="w-screen h-screen">
-			<div className="flex flex-col justify-between">
-				<div>
-					{
-						project.projectName
-					}
+		<div className="w-full">
+			<div className="flex flex-col justify-between items-center  ">
+				<div className="sm:text-8xl font-montserrat font-extrabold border-b-2 w-full flex justify-between">
+			
+				<Image src={project.projectThumbnail} className="w-8 sm:w-24" alt="thumbnail" width={100} height={50}></Image>				  
+				{project.projectName}
 				</div>
+				<div className="m-8">
+
 				<Image
 					src={
 						project.projectImage
 					}
 					alt="project-image"
-					width={50}
-					height={50}
-				/>
-				<div>
+					className="rounded-xl w-full border-double border-2 hover:shadow-lg hover:shadow-primary "
+					width={1050}
+					height={150}
+					/>
+					</div>
+				<div className="m-8 font-montserrat">
+					{project.summary}
+				</div>
+			</div>
+			<div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-2 p-5 m-8 rounded-md">
+			<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-secondary hover:text-black">
 					Domain:{" "}
+					<div>
 					{
 						project.domain
 							.long
 					}
+					</div>
 				</div>
-				<div>
+				<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-secondary hover:text-black">
 					Github:{" "}
+					<div>
 					<Link href={project.links[0].link}>
 						{project.projectName}
 					</Link>
+					</div>
 				</div>
-				<div>
+				<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-secondary hover:text-black">
 					Deployed Site:{" "}
+					<div>
 					<Link href={project.links[1].link}>
 					{project.projectName}
 					</Link>
-				</div>
-				<div>
-					{project.summary}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -81,7 +93,7 @@ const project_data = [
 	{
 		id: 1,
 		projectThumbnail:
-			"/images/projects/note-vault-preview.png",
+			"/images/project-icon/notevault-thumbnail.png",
 		projectName: "NoteVault",
 		domain: {
 			short: "Web dev",
@@ -90,7 +102,7 @@ const project_data = [
 		projectImage:
 			"/images/projects/note-vault-preview.png",
 		summary:
-			"NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.",
+			"NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.",
 		links: [
 			{
 				name: "Github",
