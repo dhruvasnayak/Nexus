@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const ProjectDetail = () => {
   return(			
-  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+  <div className="grid grid-cols-1">
   {project_data.map((project) => (
     <ProjectContainer
       key={project.id}
@@ -24,10 +24,15 @@ const ProjectContainer = ({
 	summary,
 	links,
 }) => {
-	const [openDesc, setOpenDesc] = useState(false);
+	const [openDesc, setOpenDesc] = useState(false); 
 	return (
     <div>
-      
+      <div className='text-8xl italic font-extrabold flex justify-center'>
+					{projectName}
+			</div>
+      <div>
+        {summary}
+      </div>
     </div>
 	);
 };
