@@ -1,12 +1,15 @@
 "use client"
 import React from "react";
+import Image from "next/image";
 
 const Faq = () => {
 	return (
-		<div className="bg bg-shaded rounded-lg">
-			<h2 className="text-2xl mx-auto text-center md:text-start font-semibold font-montserrat my-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">FAQ</h2>
+    <div className="mx-5 min[300px]:mx-[50px] sm:mx-[100px] md:[150px] my-8">
+		<div className="py-2 bg bg-shaded rounded-lg">
+			<h2 className="text-4xl mx-auto px-6 font-bold font-montserrat my-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">FAQ</h2>
 			<FaqBox />
 		</div>
+    </div>
 	);
 };
 
@@ -43,13 +46,28 @@ const FaqBox = () => {
     <div>
       <ul>
         {data.map((item, index) => (
-          <li key={item.index} className="mb-4 px-[40px]">
-            <div className="border p-2 rounded-lg  hover:border-blue-700">
+          <li key={item.index} className="mb-4 px-6">
+            <div className="border-[1px] border-white/20  p-2 rounded-lg  hover:border-blue-700 hover:bg-gray-900">
               <div className="flex justify-between text-md font-montserrat " onClick={() => handleToggle(index)}>
                 {item.question}
-                <button className="cursor-pointer">
-                  {toggles[index] ? "-" : "+"}
-                </button>
+                
+                
+
+              <button
+						className="p-1.5   hover:bg-gray-900 rounded font-montserrat text-[10px] font-medium tracking-wider"
+						onClick={() => toggles[index]}
+					>
+						<Image
+							src="/images/icons/cross.svg"
+							width={10}
+							height={10}
+							alt="open description"
+							className={`transition-all ${
+								toggles[index] ? "rotate-45" : ""
+							} transform `}
+						/>
+					</button>
+
               </div>
 
               <div>

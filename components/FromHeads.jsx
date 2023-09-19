@@ -76,12 +76,11 @@ const head_data = [
 
 export default function FromHeads() {
 	return (
-		<div className="p-10">
-			<p className="text-2xl text-center font-semibold font-montserrat my-4 md:text-start text-white text-transparent">
+		<div className="phone:p-1 my-6 p-[0.5]">
+			<p className="text-2xl font-semibold font-montserrat  text-white text-transparent">
 				From Our
-				<span className="text-2xl text-center md:text-start font-semibold font-montserrat my-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-					{" "}
-					Heads
+				<span className="text-2xl  font-semibold font-montserrat my-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+					{" "}Heads
 				</span>
 			</p>
 
