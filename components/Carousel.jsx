@@ -51,7 +51,7 @@ const Carouseld = () => {
         <Carousel {...settings} className='mt-6 rounded'>
           {images.map((item) => (
             <div key={item.id}>
-              <img className='rounded-2xl' src={item.src} alt={item.alt} />
+              <img className='h-[450px] rounded-2xl' src={item.src} alt={item.alt} />
             </div>
           ))}
         </Carousel>
