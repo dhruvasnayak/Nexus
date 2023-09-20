@@ -28,7 +28,7 @@ export default Activities;
 const ActivityContainer = ({ id, images, date, summary, eventName, likes }) => {
   const [openDesc, setOpenDesc] = useState(false);
   return (
-    <div className="flex flex-col gap-y-2 sm:gap-y-3 justify-center items-center border-white/10 border-[1px] rounded-md p-2 sm:p-3">
+    <div className="flex flex-col gap-y-2 sm:gap-y-3 justify-center items-center border-white/10 border-[1px] rounded-md p-2 sm:p-3 md:p-5">
       <div className="flex items-center justify-between w-full mt-2 mb-1 sm:mt-2.5 sm:mb-1.5">
         <div>
           <h1 className="font-montserrat bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text font-bold text-lg md:text-xl">

@@ -17,10 +17,10 @@ const Navbar = () => {
 						<Link href="/">home</Link>
 					</li>
 					<li className="uppercase">
-						<Link href="/">about</Link>
+						<Link href="/about">about</Link>
 					</li>
 					<li className="uppercase">
-						<Link href="/">discover</Link>
+						<Link href="/discover">discover</Link>
 					</li>
 				</ul>
 				<Button
