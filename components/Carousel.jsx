@@ -8,29 +8,29 @@ import './Carousel.css'
 const Carouseld = () => {
   const images = [{
     id: 1,
-    src: "https://www.hostgator.com/blog/wp-content/uploads/2021/03/How-to-Make-a-Website-Quickly.jpg",
+    src: "/images/events/unsplash_-HIiNFXcbtQ.png",
     alt: "Image 1"
   },
   {
     id: 2,
-    src: "https://www.hostgator.com/blog/wp-content/uploads/2021/03/How-to-Make-a-Website-Quickly.jpg",
+    src: "/images/events/unsplash_fT49QnFucQ8.png",
     alt: "Image 2 "
   },
   {
     id: 3,
-    src: "https://www.hostgator.com/blog/wp-content/uploads/2021/03/How-to-Make-a-Website-Quickly.jpg",
+    src: "/images/events/unsplash_ioJBsYQ-pPM.png",
 
     alt: "Image 3"
   },
   {
     id: 4,
-    src: "https://www.hostgator.com/blog/wp-content/uploads/2021/03/How-to-Make-a-Website-Quickly.jpg",
+    src: "/images/events/unsplash_XtUd5SiX464.png",
 
     alt: "Image 4"
   },
   {
     id: 5,
-    src: "https://www.hostgator.com/blog/wp-content/uploads/2021/03/How-to-Make-a-Website-Quickly.jpg",
+    src: "/images/events/unsplash_Wa9ilX9XYOI.png",
 
     alt: "Image 5"
   }
@@ -43,18 +43,15 @@ const Carouseld = () => {
     showStatus: false,
     transitionTime: 700,
     useKeyboardArrows: true,
-    autoPlay:true,
     interval:1300,
-
-
   }
   return (
     <div className='flex justify-center flex-col items-center'>
       <div className="carousel-container">
-        <Carousel {...settings} className='mt-6 '>
+        <Carousel {...settings} className='mt-6 rounded'>
           {images.map((item) => (
             <div key={item.id}>
-              <img className='md:w-1/2 w-full round-10' src={item.src} alt={item.alt} />
+              <img className='rounded-2xl' src={item.src} alt={item.alt} />
             </div>
           ))}
         </Carousel>
