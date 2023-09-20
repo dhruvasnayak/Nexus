@@ -14,6 +14,7 @@ const Projects = () => {
 				</span>
 			</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+			{/* <div className="xl:columns-3 columns-1 md:columns-2 gap-4 mx-auto space-y-3 pb-28"> */}
 				{projectData.map((project) => (
 					<ProjectContainer
 						key={project.id}
@@ -37,6 +38,7 @@ const ProjectContainer = ({
 	links,
 }) => {
 	const [openDesc, setOpenDesc] = useState(false);
+
 	return (
 		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-start items-center border-white/10 border-[1px] rounded-md p-3">
 			<div className="flex justify-between items-center w-full px-0 md:px-1">
@@ -68,6 +70,11 @@ const ProjectContainer = ({
 				alt={projectName}
 				className="z-20 object-cover rounded-md overflow-hidden w-full aspect-video"
 			/>
+			<p
+				className="text-white/70 duration-1000 transition-all font-montserrat my-1 text-xs sm:text-sm md:text-sm line-clamp-3"
+			>
+				{summary}
+			</p>
 			<div className="flex items-center justify-between w-full sm:mx-2">
 				<span className="border-white/10 border-[1px] font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
 					<Link
@@ -85,9 +92,10 @@ const ProjectContainer = ({
 					</Link>
 				</span>
 				<div className="flex gap-x-1.5 items-center">
+					{console.log(links)}
 					{links.map((link, i) => (
 						<Link
-							href="/"
+							href={link.link}
 							key={link.link}
 							className="p-1.5 hover:bg-gray-900 rounded font-montserrat text-[10px] font-medium tracking-wider"
 						>
