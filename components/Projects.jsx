@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import projectData from "../components/project_data"
+import projectData from "./project_data";
+import { Button } from "./Button";
 
 const Projects = () => {
 	return (
@@ -14,7 +15,7 @@ const Projects = () => {
 				</span>
 			</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-			{/* <div className="xl:columns-3 columns-1 md:columns-2 gap-4 mx-auto space-y-3 pb-28"> */}
+				{/* <div className="xl:columns-3 columns-1 md:columns-2 gap-4 mx-auto space-y-3 pb-28"> */}
 				{projectData.map((project) => (
 					<ProjectContainer
 						key={project.id}
@@ -22,6 +23,14 @@ const Projects = () => {
 					/>
 				))}
 			</div>
+			<Button
+				size="lg"
+				// variant="outline"
+				className="w-full my-8"
+				href="/projects"
+			>
+				Show More
+			</Button>
 		</div>
 	);
 };
@@ -70,9 +79,7 @@ const ProjectContainer = ({
 				alt={projectName}
 				className="z-20 object-cover rounded-md overflow-hidden w-full aspect-video"
 			/>
-			<p
-				className="text-white/70 duration-1000 transition-all font-montserrat my-1 text-xs sm:text-sm md:text-sm line-clamp-3"
-			>
+			<p className="text-white/70 duration-1000 transition-all font-montserrat my-1 text-xs sm:text-sm md:text-sm line-clamp-3">
 				{summary}
 			</p>
 			<div className="flex items-center justify-between w-full sm:mx-2">

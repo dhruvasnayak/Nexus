@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const Faq = () => {
 	return (
-    <div className="mx-5 min[300px]:mx-[50px] sm:mx-[100px] md:[150px] my-8">
+    <div className="my-8">
 		<div className="py-2 bg bg-shaded rounded-lg">
-			<h2 className="text-4xl mx-auto px-6 font-bold font-montserrat my-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">FAQ</h2>
+			<h2 className="text-4xl font-bold font-montserrat my-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">FAQ</h2>
 			<FaqBox />
 		</div>
     </div>
@@ -46,7 +46,7 @@ const FaqBox = () => {
     <div>
       <ul>
         {data.map((item, index) => (
-          <li key={item.index} className="mb-4 px-6">
+          <li key={item.index} className="mb-4">
             <div className="border-[1px] border-white/20  p-2 rounded-lg  hover:border-blue-700 hover:bg-gray-900">
               <div className="flex justify-between text-md font-montserrat " onClick={() => handleToggle(index)}>
                 {item.question}

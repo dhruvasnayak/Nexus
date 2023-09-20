@@ -3,23 +3,36 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Carousel } from "@mantine/carousel";
 import Link from "next/link";
+import { Button } from "./Button";
+
 
 const Activities = () => {
   return (
-    <div>
-      <h1 className="font-bold text-2xl font-montserrat my-3">
-        Our
-        <span className="font-bold ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
-          Activities
-        </span>
-      </h1>
+		<div>
+			<h1 className="font-bold text-2xl font-montserrat my-3">
+				Our
+				<span className="font-bold ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
+					Activities
+				</span>
+			</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        {activity_data.map((activity) => (
-          <ActivityContainer key={activity.i} {...activity} />
-        ))}
-      </div>
-    </div>
+			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+				{activity_data.map((activity) => (
+					<ActivityContainer
+						key={activity.i}
+						{...activity}
+					/>
+				))}
+			</div>
+			<Button
+				size="lg"
+				// variant="outline"
+				className="w-full my-8"
+				href="/activities"
+			>
+				Show More
+			</Button>
+		</div>
   );
 };
 
