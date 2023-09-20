@@ -1,24 +1,18 @@
 "use client";
 import React from "react";
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-	useRouter,
-	usePathname,
-} from "next/navigation";
+import projectData from "../../../components/project_data";
 
 const ProjectDetail = ({ params }) => {
 	const projectID = params;
-	const router = useRouter();
-	const pathName = usePathname();
 	const projectIdValue = Number(
 		projectID["project"]
 	);
 	// console.log(projectIdValue);
 	// console.log(pathName);
 
-	const project = project_data.find(
+	const project = projectData.find(
 		(item) =>
 			item.id === projectIdValue
 	);
@@ -43,11 +37,11 @@ const ProjectDetail = ({ params }) => {
 						src={
 							project.projectThumbnail
 						}
-						className="w-8 sm:w-24"
+						className="w-8 sm:w-24 rounded-lg"
 						alt="thumbnail"
 						width={100}
 						height={50}
-					></Image>
+					/>
 					{
 						project.projectName
 					}

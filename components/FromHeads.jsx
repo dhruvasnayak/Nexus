@@ -1,121 +1,114 @@
 import Image from "next/image";
 import React from "react";
 
+const head_data = [
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "John Doe",
+        domain: "EVM 1",
+        message: "I'm passionate about exploring the latest developments in EVM technology and how it's reshaping the future. Join me in discussing its impact on various industries."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Jane Smith",
+        domain: "EVM 2",
+        message: "Let's delve into the world of decentralized finance and its role in transforming traditional financial systems. Your insights on EVM 2 are highly valued."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Alice Johnson",
+        domain: "EVM 3",
+        message: "Exploring the potential of blockchain technology beyond cryptocurrencies is my passion. EVM 3 is the place to share ideas and innovations."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Bob Wilson",
+        domain: "EVM 4",
+        message: "Let's discuss the real-world applications of EVM 4 in supply chain management. Your expertise will contribute to a lively conversation."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Emily Davis",
+        domain: "EVM 5",
+        message: "EVM 5 is your gateway to understanding the intersection of art and technology. Join me in exploring how EVM is transforming the creative industries."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Michael Brown",
+        domain: "EVM 6",
+        message: "Let's unravel the mysteries of smart contracts and their potential in EVM 6. Your insights could pave the way for groundbreaking innovations."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Olivia Wilson",
+        domain: "EVM 7",
+        message: "I'm fascinated by the environmental implications of EVM 7. Join the discussion on sustainable blockchain solutions and their impact on the planet."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Daniel Lee",
+        domain: "EVM 8",
+        message: "EVM 8 is where we explore the future of finance. Share your thoughts on DeFi, NFTs, and more as we shape the financial landscape together."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "Sophia Clark",
+        domain: "EVM 9",
+        message: "Join EVM 9 to discuss the latest trends in blockchain security. Your expertise will help us navigate the evolving landscape of digital trust."
+    },
+    {
+        imageUrl: "/images/project-icon/OFAAX40 12.png",
+        name: "William Adams",
+        domain: "EVM 10",
+        message: "EVM 10 is your hub for exploring the role of blockchain in healthcare. Let's envision a healthier future together through innovative solutions."
+    }
+];
+
+
 export default function FromHeads() {
 	return (
 		<div className="phone:p-1 my-6 p-[0.5]">
-			<p className="text-2xl font-semibold font-montserrat  text-white text-transparent">
+				<h1 className="font-bold text-2xl font-montserrat my-3">
 				From Our
-				<span className="text-2xl  font-semibold font-montserrat my-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-					{" "}Heads
+				<span className="font-bold ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
+					Heads
 				</span>
-			</p>
-			
-			
+			</h1>
 
-			
-			 <div className=" grid grid-cols-1 grid-flow-row-dense gap-4 my-4 phone:grid-cols-3 ">	
-			 {/* <div className=" grid grid-cols-1 grid-flow-row-dense gap-4 my-4"> */}
-			 
-				 {
-					data.map((item,index) => (
-					<span className="border-[1px] border-white/20 rounded-2xl phone:p-6 p-3 hover:border-blue-700">
-						<li key={item.index} className="list-none ">
-						<span className="flex gap-4">
-							<Image
-							height={100}
-							width={100}
-							src={item.img}
-							alt="Profile Pic"
-            				className="h-12 w-12"
-							/>
-
-						<span className="flex flex-col">
-							<p className="text-md font-bold md:text-lg">
-							{item.name}
-							</p>
-							<p className="text-sm font-extralight text-text-secondary">
-							{item.domain}
-							</p>
-						</span> 
-						</span>
-						<div className="bg bg-shaded text-sm mt-4">
-						<p>{item.msg}</p>
-						</div> 
-
-						</li>
-					</span>
-				
-			))
-		}				 
-			</div> 
-		</div> 
+			<div className="xl:columns-4 lg:columns-3 columns-1 sm:columns-2 gap-4 mx-auto space-y-3 pb-28">
+				{/* <div className="bg-gray-200 break-inside-avoi"></div> */}
+				{head_data.map((head) => (
+					<Heads
+						key={head.domain}
+						{...head}
+					/>
+				))}
+			</div>
+		</div>
 	);
 }
 
-
-	const data = [
-		{
-		  index: 1,
-		  img:"/images/project-icon/OFAAX40 11.png",
-						name:"Wade Warren",
-						domain:"Head",
-						msg:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! "
-		},
-		{
-		  index: 2,
-		  img:"/images/project-icon/OFAAX40 12.png",
-						name:"Cameron Williamson",
-						domain:"Operation Head",
-						msg:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel est velit odit!
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! `
-		},
-		{
-			index:"3",
-						img:"/images/project-icon/OFAAX40 1.png",
-						name:"Guy Hawkins",
-						domain:"web Dev Head",
-						msg:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
-		},
-		{
-			index:"4",
-						img:"/images/project-icon/OFAAX40 11.png",
-						name:"Esther Howard",
-						domain:"Design HEad",
-						msg:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
-		},
-		{
-			index:"5",
-						img:"/images/project-icon/OFAAX40 12.png",
-						name:"ROnald Richards",
-						domain:"Logistic Head",
-						msg:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
-		},
-		{
-			index:"6",
-						img:"/images/project-icon/OFAAX40 1.png",
-						name:"Esther Howard",
-						domain:"PR Head",
-						msg:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibusdam assumenda enim eius vel, est velit odit!"
-		},
-		{
-			index:"7",
-						img:"/images/project-icon/OFAAX40 11.png",
-						name:"Savannah Nguyen",
-						domain:"Technical Head",
-						msg:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque "
-		},
-		{
-			index:"8",
-						img:"/images/project-icon/OFAAX40 12.png",
-						name:"Robert Fox",
-						domain:"Finance Head",
-						msg:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic ab veniam saepe repellendus eaque at voluptas molestiae praesentium porro nulla rem, quibu"
-		}
-
-	  ];
+const Heads = (props) => {
+	return (
+		<article className="transition-colors break-inside-avoid border-white/10 border-[1px] rounded-md p-4 hover:border-primary">
+			<div className="flex gap-2 bg-background font-montserrat">
+				<Image
+					height={100}
+					width={100}
+					src={props.imageUrl}
+					alt={`${props.name}-thumbnail`}
+					className="h-12 w-12"
+				/>
+				<article className="flex flex-col">
+					<h2 className="text-base font-bold font-poppins">{props.name}</h2>
+					<p className="text-xs font-medium tracking-wide font-poppins text-text-secondary">
+						{props.domain}
+					</p>
+				</article>
+			</div>
+			<div className="bg bg-shaded text-sm mt-4">
+				<p>{props.message}</p>
+			</div>
+		</article>
+	);
+};
