@@ -8,7 +8,7 @@ import { Button } from "./Button";
 const Projects = () => {
 	return (
 		<div>
-			<h1 className="font-bold text-2xl font-montserrat my-3">
+			<h1 className="font-bold text-2xl font-montserrat my-4">
 				Our
 				<span className="font-bold ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
 					Projects

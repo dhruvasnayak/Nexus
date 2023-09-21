@@ -87,7 +87,7 @@ const head_data = [
 export default function FromHeads() {
 	return (
 		<div className="phone:p-1 my-6 p-[0.5]">
-			<h1 className="font-bold text-2xl font-montserrat my-3">
+			<h1 className="font-bold text-2xl font-montserrat my-4">
 				From Our
 				<span className="font-bold ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
 					Heads
