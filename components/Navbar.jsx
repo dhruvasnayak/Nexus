@@ -22,6 +22,12 @@ const Navbar = () => {
 					<li className="uppercase">
 						<Link href="/discover">discover</Link>
 					</li>
+					<li className="uppercase">
+						<Link href="/projects">projects</Link>
+					</li>
+					<li className="uppercase">
+						<Link href="/events">events</Link>
+					</li>
 				</ul>
 				<Button
 					size="sm"

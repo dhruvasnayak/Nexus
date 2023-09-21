@@ -9,7 +9,7 @@ export default function Home() {
 	return (
 		<>
 			<Navbar />
-			<main className="mx-2 sm:mx-14 md:mx-28 flex flex-col gap-y-10 md:gap-y-14">
+			<main className="mx-4 sm:mx-14 md:mx-28 flex flex-col gap-y-10 md:gap-y-14">
 				<Carousel />
 				<Hero />
 				<Projects />

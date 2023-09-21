@@ -23,14 +23,17 @@ const Projects = () => {
 					/>
 				))}
 			</div>
+			<div className="flex justify-center items-center">
+
 			<Button
 				size="lg"
 				// variant="outline"
-				className="w-full my-8"
+				className="w-full my-8 md:w-1/2 font-medium font-montserrat"
 				href="/projects"
 			>
 				Show More
 			</Button>
+			</div>
 		</div>
 	);
 };
@@ -46,10 +49,10 @@ const ProjectContainer = ({
 	summary,
 	links,
 }) => {
-	const [openDesc, setOpenDesc] = useState(false);
+	// const [openDesc, setOpenDesc] = useState(false);
 
 	return (
-		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-start items-center border-white/10 border-[1px] rounded-md p-3">
+		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-start items-center border-white/20 border-[1px] rounded-md p-3">
 			<div className="flex justify-between items-center w-full px-0 md:px-1">
 				<div className="flex items-center gap-x-2 sm:gap-x-4">
 					<Image
@@ -57,7 +60,7 @@ const ProjectContainer = ({
 						height={150}
 						width={150}
 						alt="Project 1"
-						className="border-[1px] border-white/20 w-10 h-10 md:w-12 md:h-12 object-cover rounded-md"
+						className="border-[1px] border-white/10 w-10 h-10 md:w-12 md:h-12 object-cover rounded-md"
 					/>
 					<h1 className="font-montserrat font-extrabold italic text-xl">
 						{projectName}
@@ -99,7 +102,6 @@ const ProjectContainer = ({
 					</Link>
 				</span>
 				<div className="flex gap-x-1.5 items-center">
-					{console.log(links)}
 					{links.map((link, i) => (
 						<Link
 							href={link.link}
@@ -115,7 +117,7 @@ const ProjectContainer = ({
 							<span className="sr-only">{link.name} link</span>
 						</Link>
 					))}
-					<button
+					{/* <button
 						className="p-1.5  border-[1px] border-white/20 hover:bg-gray-900 rounded font-montserrat text-[10px] font-medium tracking-wider"
 						onClick={() => setOpenDesc((prev) => !prev)}
 					>
@@ -129,9 +131,10 @@ const ProjectContainer = ({
 							} transform `}
 						/>
 					</button>
+				*/}
 				</div>
 			</div>
-			{openDesc && (
+			{/* {openDesc && (
 				<p
 					className={`${
 						openDesc ? "text-white/70" : "text-transparent"
@@ -139,7 +142,7 @@ const ProjectContainer = ({
 				>
 					{summary}
 				</p>
-			)}
+			)}  */}
 		</div>
 	);
 };
