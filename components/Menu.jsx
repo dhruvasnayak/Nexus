@@ -4,6 +4,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 import { AiOutlineMenu } from "react-icons/ai";
+import Link from "next/link";
 
 export default function Example() {
   return (
@@ -37,7 +38,8 @@ export default function Example() {
                       active ? "text-white bg-[#0a0a0a] font-montserrat" : "text-white"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    HOME
+                    <Link href="/">HOME</Link>
+                    
                   </button>
                 )}
               </Menu.Item>
@@ -45,10 +47,10 @@ export default function Example() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? " text-white bg-[#0a0a0a] font-montserrat" : "text-white"
+                      active ? " text-white bg-background font-montserrat" : "text-white"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    ABOUT
+                    <Link href="/about">ABOUT</Link>
                   </button>
                 )}
               </Menu.Item>
@@ -56,10 +58,10 @@ export default function Example() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? " text-white bg-[#0a0a0a] font-montserrat" : "text-white"
+                      active ? " text-white bg-background font-montserrat" : "text-white"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    DISCOVER
+                    <Link href="/discover">DISCOVER</Link>
                   </button>
                 )}
               </Menu.Item>
@@ -67,10 +69,10 @@ export default function Example() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? " text-white bg-[#0a0a0a] font-montserrat " : "text-white"
+                      active ? " text-white bg-background font-montserrat " : "text-white"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    ABOUT
+                    <Link href="/projects">PROJECTS</Link>
                   </button>
                 )}
               </Menu.Item>
@@ -78,10 +80,10 @@ export default function Example() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? " text-white bg-[#0a0a0a] font-montserrat" : "text-white"
+                      active ? " text-white bg-background font-montserrat" : "text-white"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    EVENTS
+                    <Link href="/events">EVENTS</Link>
                   </button>
                 )}
               </Menu.Item>
