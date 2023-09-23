@@ -42,8 +42,8 @@ export default Activities;
 const ActivityContainer = ({ id, images, date, summary, eventName, likes }) => {
 	const [openDesc, setOpenDesc] = useState(false);
 	return (
-		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-center items-center border-white/10 border-[1px] rounded-md p-2 sm:p-3 md:p-5 hover:shadow-lg">
-			<div className="flex items-center justify-between w-full mt-2 mb-1 sm:mt-2.5 sm:mb-1.5">
+		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-center items-center border-gray-700 border-[1px] rounded-md p-2 sm:px-3 md:py-3 md:px-5 hover:shadow-lg">
+			<div className="flex items-center justify-between w-full mt-1.5 mb-1 sm:mb-1.5">
 				<div>
 					<h1 className="font-inter bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text font-extrabold text-lg md:text-xl">
 						{eventName}
@@ -75,12 +75,12 @@ const ActivityContainer = ({ id, images, date, summary, eventName, likes }) => {
 			</Carousel>
 
 			<div className="flex items-center justify-between w-full sm:mx-2">
-				<span className="border-white/10 border-[1px] font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
+				<span className="border-white/20 border-[1px] font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
 					<Link
 						className="group flex gap-x-3 hover:gap-x-4 items-center"
 						href={`/events/${id}`}
 					>
-						<span className="text-[12px]">Learn More</span>
+						<span className="text-sm">Learn More</span>
 						<Image
 							src="/images/icons/right-arrow.svg"
 							width={30}
@@ -125,7 +125,7 @@ const ActivityContainer = ({ id, images, date, summary, eventName, likes }) => {
 				<p
 					className={`${
 						openDesc ? "text-white/70" : "text-transparent"
-					} duration-1000 transition-all font-montserrat my-1 text-xs sm:text-sm md:text-sm line-clamp-3`}
+					} duration-1000 transition-all font-montserrat my-1 text-sm md:text-sm line-clamp-3`}
 				>
 					{summary}
 				</p>

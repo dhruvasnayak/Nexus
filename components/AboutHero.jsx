@@ -2,9 +2,9 @@ import React from 'react'
 
 const AboutHero = () => {
   return (
-     <div className='flex flex-col justify-center items-center m-10 gap-4'>
-        <p className='text-5xl leading-[30px] font-montserrat font-black text-[#009EFD] '>Discover Nexus</p>
-        <p className='text-3xl leading-10 font-montserrat font-bold'>Creating a Community of Tech Enthusiasts</p>
+     <div className='flex flex-col justify-center items-center'>
+        <p className='text-[40px] text-center leading-[30px] font-montserrat] font-black text-primary'>Discover Nexus</p>
+        <p className='text-[20px] text-center leading-10 font-montserrat font-bold'>Creating a Community of Tech Enthusiasts</p>
       </div>
   )
 }

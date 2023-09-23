@@ -5,12 +5,12 @@ import Link from "next/link";
 const Navbar = () => {
 	return (
 		<>
-			<div className="h-16 px-4 flex items-center lg:gap-72 border-b-2 border-secondary/40 border-[1px] justify-between  lg:w-full">
-				<div className="md:hidden">
+			<div className="py-2 px-4 grid grid-cols-3 w-full items-center content-center justify-between lg:gap-72 border-secondary/40 border-b-[1px] lg:w-full sticky top-0 backdrop-blur-md bg-white/5 z-50">
+				<div className="md:hidden justify-self-start">
 					<Menu />
 				</div>
-				<h1 className="p-[25px] font-montserrat font-bold text-lg cursor-pointer">
-					<Link href="/" >NEXUS</Link>
+				<h1 className="font-montserrat font-bold text-lg justify-self-center md:justify-self-start">
+					NEXUS
 				</h1>
 				<ul className="hidden md:flex md:gap-5  md:justify-between  md:h-full md:items-center md:text-[12px] md:font-montserrat md:font-bold">
 					<li className="uppercase">
@@ -31,7 +31,7 @@ const Navbar = () => {
 				</ul>
 				<Button
 					size="sm"
-					className="font-bold py-30 px-10"
+					className="font-bold py-30 px-10 justify-self-end"
 				>
 					Login
 				</Button>
