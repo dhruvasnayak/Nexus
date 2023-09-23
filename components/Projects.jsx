@@ -40,15 +40,15 @@ const Projects = () => {
 export default Projects;
 
 const ProjectContainer = ({
-	id,
-	projectImage,
-	projectName,
-	projectThumbnail,
-	domain,
-	summary,
-	links,
+  id,
+  projectImage,
+  projectName,
+  projectThumbnail,
+  domain,
+  summary,
+  links,
 }) => {
-	// const [openDesc, setOpenDesc] = useState(false);
+  // const [openDesc, setOpenDesc] = useState(false);
 
 	return (
 		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-start items-center border-gray-700 border-[1px] rounded-md p-3">
@@ -131,9 +131,9 @@ const ProjectContainer = ({
 						/>
 					</button>
 				*/}
-				</div>
-			</div>
-			{/* {openDesc && (
+        </div>
+      </div>
+      {/* {openDesc && (
 				<p
 					className={`${
 						openDesc ? "text-white/70" : "text-transparent"
@@ -142,6 +142,6 @@ const ProjectContainer = ({
 					{summary}
 				</p>
 			)}  */}
-		</div>
-	);
+    </div>
+  );
 };

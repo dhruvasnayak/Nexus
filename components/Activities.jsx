@@ -114,7 +114,7 @@ const ActivityContainer = ({ id, images, date, summary, eventName, likes }) => {
 							height={16}
 							alt="open description"
 							className={`transition-all ${
-								openDesc ? "rotate-45" : ""
+								openDesc ? "-rotate-45" : ""
 							} transform `}
 						/>
 					</button>

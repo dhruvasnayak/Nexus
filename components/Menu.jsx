@@ -48,7 +48,7 @@ export default function Example() {
                       active ? " text-white bg-[#0a0a0a] font-montserrat" : "text-white"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    TEAM
+                    ABOUT
                   </button>
                 )}
               </Menu.Item>
@@ -59,7 +59,7 @@ export default function Example() {
                       active ? " text-white bg-[#0a0a0a] font-montserrat" : "text-white"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    OPTIONS
+                    DISCOVER
                   </button>
                 )}
               </Menu.Item>
@@ -81,7 +81,7 @@ export default function Example() {
                       active ? " text-white bg-[#0a0a0a] font-montserrat" : "text-white"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    HOME
+                    EVENTS
                   </button>
                 )}
               </Menu.Item>

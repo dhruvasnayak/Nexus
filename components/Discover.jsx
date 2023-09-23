@@ -22,11 +22,11 @@ const discover_data = [
 
 const Discover = () => {
 	return (
-		<div className="grid grid-cols-1 place-items-center phone:grid-cols-2 gap-5 lg:grid-cols-4">
+		<div className="grid grid-cols-1 place-items-center phone:grid-cols-2 gap-5 lg:grid-cols-4 ">
 			{discover_data.map((discover, i) => (
 				<div
 					key={i}
-					className="p-5 border-[1px] rounded-lg border-white/20 h-[200px] bg-shaded w-full flex justify-between flex-col"
+					className="p-5 border-[1px] rounded-lg border-white/20 h-[200px] bg-shaded w-full flex justify-between flex-col hover:bg-white/10"
 				>
 					<Image
 						src="/images/icons/leaf.svg"
