@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const Faq = () => {
 	return (
-		<div className="my-8">
-			<h1 className="font-bold text-2xl font-montserrat my-4 ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
+		<div className="">
+			<h1 className="font-bold text-2xl font-montserrat mb-4 mt-12 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
 				FAQ
 			</h1>
 			<FaqBox />

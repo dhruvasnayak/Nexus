@@ -70,7 +70,7 @@ export default function Example() {
                       active ? " text-white bg-[#0a0a0a] font-montserrat " : "text-white"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    DISCOVER
+                    ABOUT
                   </button>
                 )}
               </Menu.Item>

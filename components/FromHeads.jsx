@@ -8,7 +8,7 @@ const head_data = [
 		domain: "EVM 1",
 		role: "domain head",
 		message:
-			"I'm passionate about exploring the latest developments in EVM technology and how it's reshaping the future. Join me in discussing its impact on various industries.",
+			"I'm passionate about exploring the latest developments.",
 	},
 	{
 		imageUrl: "/images/member/thumbnail/img2.png",
@@ -16,7 +16,7 @@ const head_data = [
 		domain: "EVM 2",
 		role: "core",
 		message:
-			"Let's delve into the world of decentralized finance and its role in transforming traditional financial systems. Your insights on EVM 2 are highly valued.",
+			"Let's delve into the world of decentralized finance",
 	},
 	{
 		imageUrl: "/images/member/thumbnail/img1.png",
@@ -24,7 +24,7 @@ const head_data = [
 		role: "core",
 		domain: "EVM 3",
 		message:
-			"Exploring the potential of blockchain technology beyond cryptocurrencies is my passion. EVM 3 is the place to share ideas and innovations.",
+			"Exploring the potential of blockchain technology.",
 	},
 	{
 		imageUrl: "/images/member/thumbnail/img4.png",
@@ -32,7 +32,7 @@ const head_data = [
 		domain: "EVM 4",
 		role: "domain head",
 		message:
-			"Let's discuss the real-world applications of EVM 4 in supply chain management. Your expertise will contribute to a lively conversation.",
+			"Let's discuss the real-world applications of EVM 4 in supply chain management. Your expertise will contribute to a lively conversation. Your expertise will contribute to a lively conversation.",
 	},
 	{
 		imageUrl: "/images/member/thumbnail/img3.png",
@@ -40,7 +40,7 @@ const head_data = [
 		domain: "EVM 5",
 		role: "domain head",
 		message:
-			"EVM 5 is your gateway to understanding the intersection of art and technology. Join me in exploring how EVM is transforming the creative industries.",
+			"EVM 5 is your gateway to understanding the intersection of art and technology.",
 	},
 	{
 		imageUrl: "/images/member/thumbnail/img4.png",
@@ -80,14 +80,14 @@ const head_data = [
 		domain: "EVM 10",
 		role: "volunteer",
 		message:
-			"EVM 10 is your hub for exploring the role of blockchain in healthcare. Let's envision a healthier future together through innovative solutions.",
+			"EVM 10 is your hub for exploring the role of blockchain in healthcare. Let's envision a healthier future together through innovative solutions. EVM 10 is your hub for exploring the role of blockchain in healthcare. Let's envision a healthier future together through innovative solutions. EVM 10 is your hub for exploring the role of blockchain in healthcare. Let's envision a healthier future together through innovative solutions. EVM 10 is your hub for exploring the role of blockchain in healthcare. Let's envision a healthier future together through innovative solutions. EVM 10 is your hub for exploring the role of blockchain in healthcare. Let's envision a healthier future together through innovative solutions.",
 	},
 ];
 
 export default function FromHeads() {
 	return (
 		<div className="phone:p-1 my-6 p-[0.5]">
-			<h1 className="font-bold text-2xl font-montserrat my-4">
+			<h1 className="font-bold text-2xl font-montserrat mb-4 mt-12">
 				From Our
 				<span className="font-bold ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
 					Heads
@@ -150,7 +150,7 @@ const Heads = (props) => {
 					</div>
 				</article>
 			</div>
-			<div className="text-sm md:text-xs mt-2.5 font-inter text-text-secondary">
+			<div className="text-sm md:text-xs mt-2.5 font-inter text-white/80">
 				<p>{props.message}</p>
 			</div>
 		</article>
