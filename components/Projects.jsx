@@ -52,7 +52,7 @@ const ProjectContainer = ({
 	// const [openDesc, setOpenDesc] = useState(false);
 
 	return (
-		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-start items-center border-white/20 border-[1px] rounded-md p-3">
+		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-start items-center border-gray-400/40 border-[1px] rounded-md p-3">
 			<div className="flex justify-between items-center w-full px-0 md:px-1">
 				<div className="flex items-center gap-x-2 sm:gap-x-4">
 					<Image
@@ -82,7 +82,7 @@ const ProjectContainer = ({
 				alt={projectName}
 				className="z-20 object-cover rounded-md overflow-hidden w-full aspect-video"
 			/>
-			<p className="text-white/70 duration-1000 transition-all font-montserrat my-1 text-xs sm:text-sm md:text-sm line-clamp-3">
+			<p className="text-white/70 duration-1000 transition-all font-montserrat my-1 text-sm md:text-sm line-clamp-3">
 				{summary}
 			</p>
 			<div className="flex items-center justify-between w-full sm:mx-2">
@@ -91,7 +91,7 @@ const ProjectContainer = ({
 						className="group flex gap-x-3 hover:gap-x-4 items-center"
 						href={`/projects/${id}`}
 					>
-						<span className="text-xs">Learn More</span>
+						<span className="text-sm">Learn More</span>
 						<Image
 							src="/images/icons/right-arrow.svg"
 							width={30}
