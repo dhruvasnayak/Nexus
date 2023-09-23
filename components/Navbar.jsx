@@ -9,8 +9,8 @@ const Navbar = () => {
 				<div className="md:hidden">
 					<Menu />
 				</div>
-				<h1 className="p-[25px] font-montserrat font-bold text-lg">
-					NEXUS
+				<h1 className="p-[25px] font-montserrat font-bold text-lg cursor-pointer">
+					<Link href="/" >NEXUS</Link>
 				</h1>
 				<ul className="hidden md:flex md:gap-5  md:justify-between  md:h-full md:items-center md:text-[12px] md:font-montserrat md:font-bold">
 					<li className="uppercase">

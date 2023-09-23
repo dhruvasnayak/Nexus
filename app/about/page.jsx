@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../components/Button";
+// import { Button } from "../../components/Button";
 import Mentors from "../../components/Mentors";
 import Goals from "../../components/Goals";
 import Faq from "../../components/Faq";

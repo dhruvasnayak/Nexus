@@ -48,7 +48,7 @@ const FaqBox = () => {
 						className="mb-4"
 						onClick={() => handleToggle(index)}
 					>
-						<div className="border-[1px] border-white/20  p-4 rounded-md  hover:bg-white/10">
+						<div className="border-[2px] border-white/20  p-4 rounded-md  hover:bg-white/10">
 							<div className="flex justify-between text-md font-montserrat ">
 								{item.question}
 
@@ -58,11 +58,11 @@ const FaqBox = () => {
 								>
 									<Image
 										src="/images/icons/cross.svg"
-										width={45}
-										height={45}
+										width={20}
+										height={20}
 										alt="open description"
 										className={`transition-all ${
-											toggles[index] ? "rotate-45" : ""
+											toggles[index] ? "-rotate-45" : ""
 										} transform `}
 									/>
 								</button>

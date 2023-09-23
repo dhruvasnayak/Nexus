@@ -122,10 +122,10 @@ const Heads = (props) => {
             width={120}
             src={props.imageUrl}
             alt={`${props.name}-thumbnail`}
-            className="h-10 w-10"
+            className="h-14 w-14 rounded-full"
           />
           <Image
-            className=" -right-2 -translate-y-2 bottom-0 w-4 h-4 p-1 rounded-full bg-primary text-white"
+            className=" -translate-y-2 bottom-0 w-4 h-4 p-1 rounded-full bg-primary text-white"
             src={role_icon.url}
             width={50}
             height={50}
