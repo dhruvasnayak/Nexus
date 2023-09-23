@@ -65,9 +65,8 @@ const FaqBox = () => {
 						/>
 					</button>
 				</div>
-				{/* <div className="flex justify-between text-md font-montserrat items-center"> */}
 				{toggle && (
-					<p className="mt-3 text-sm font-normal text-gray-300 font-inter">
+					<p className="mt-3 text-sm font-normal text-gray-100 font-inter">
 						{answer}
 					</p>
 				)}
