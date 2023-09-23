@@ -52,7 +52,7 @@ const ProjectContainer = ({
 	// const [openDesc, setOpenDesc] = useState(false);
 
 	return (
-		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-start items-center border-gray-400/40 border-[1px] rounded-md p-3">
+		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-start items-center border-gray-700 border-[1px] rounded-md p-3">
 			<div className="flex justify-between items-center w-full px-0 md:px-1">
 				<div className="flex items-center gap-x-2 sm:gap-x-4">
 					<Image
@@ -66,12 +66,12 @@ const ProjectContainer = ({
 						{projectName}
 					</h1>
 				</div>
-				<div className="flex font-montserrat gap-x-2">
-					<span className="uppercase text-[10px]">{`<`}</span>
-					<span className="text-[10px] whitespace-nowrap uppercase">
+				<div className="flex font-mono gap-x-1">
+					<span className="uppercase text-xs">{`<`}</span>
+					<span className="text-xs whitespace-nowrap uppercase">
 						{domain.short}
 					</span>
-					<span className="uppercase text-[10px]">{`>`}</span>
+					<span className="uppercase text-xs">{`>`}</span>
 				</div>
 			</div>
 
@@ -86,7 +86,7 @@ const ProjectContainer = ({
 				{summary}
 			</p>
 			<div className="flex items-center justify-between w-full sm:mx-2">
-				<span className="border-white/10 border-[1px] font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
+				<span className="border-white/20 border-[1px] font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
 					<Link
 						className="group flex gap-x-3 hover:gap-x-4 items-center"
 						href={`/projects/${id}`}

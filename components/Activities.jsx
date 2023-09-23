@@ -42,7 +42,7 @@ export default Activities;
 const ActivityContainer = ({ id, images, date, summary, eventName, likes }) => {
 	const [openDesc, setOpenDesc] = useState(false);
 	return (
-		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-center items-center border-gray-400/40 border-[1px] rounded-md p-2 sm:px-3 md:py-3 md:px-5 hover:shadow-lg">
+		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-center items-center border-gray-700 border-[1px] rounded-md p-2 sm:px-3 md:py-3 md:px-5 hover:shadow-lg">
 			<div className="flex items-center justify-between w-full mt-1.5 mb-1 sm:mb-1.5">
 				<div>
 					<h1 className="font-inter bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text font-extrabold text-lg md:text-xl">
@@ -75,7 +75,7 @@ const ActivityContainer = ({ id, images, date, summary, eventName, likes }) => {
 			</Carousel>
 
 			<div className="flex items-center justify-between w-full sm:mx-2">
-				<span className="border-white/10 border-[1px] font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
+				<span className="border-white/20 border-[1px] font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
 					<Link
 						className="group flex gap-x-3 hover:gap-x-4 items-center"
 						href={`/events/${id}`}
