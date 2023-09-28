@@ -15,7 +15,7 @@ const ProjectContainer = ({
 	// const [openDesc, setOpenDesc] = useState(false);
 
 	return (
-		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-start items-center border-white/20 border-[1px] rounded-md p-3">
+		<div className="flex flex-col gap-y-2 sm:gap-y-3 justify-start items-center border-white/10 border-[1px] rounded-md p-3">
 			<div className="flex justify-between items-center w-full px-0 md:px-1">
 				<div className="flex items-center gap-x-2 sm:gap-x-4">
 					<Image
@@ -49,7 +49,7 @@ const ProjectContainer = ({
 				{summary}
 			</p>
 			<div className="flex items-center justify-between w-full sm:mx-2">
-				<span className="border-white/20 border-[1px] font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
+				<span className="border-white/20 border font-montserrat hover:bg-gray-800/50 group rounded-md transition-all py-1 px-2">
 					<Link
 						className="group flex gap-x-3 hover:gap-x-4 items-center"
 						href={`/projects/${id}`}
