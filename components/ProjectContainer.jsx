@@ -80,32 +80,8 @@ const ProjectContainer = ({
 							<span className="sr-only">{link.name} link</span>
 						</Link>
 					))}
-					{/* <button
-						className="p-1.5  border-[1px] border-white/20 hover:bg-gray-900 rounded font-montserrat text-[10px] font-medium tracking-wider"
-						onClick={() => setOpenDesc((prev) => !prev)}
-					>
-						<Image
-							src="/images/icons/cross.svg"
-							width={16}
-							height={16}
-							alt="open description"
-							className={`transition-all ${
-								openDesc ? "rotate-45" : ""
-							} transform `}
-						/>
-					</button>
-				*/}
 				</div>
-			</div>
-			{/* {openDesc && (
-				<p
-					className={`${
-						openDesc ? "text-white/70" : "text-transparent"
-					} duration-1000 transition-all font-montserrat my-1 text-xs sm:text-sm md:text-sm line-clamp-3`}
-				>
-					{summary}
-				</p>
-			)}  */}
+				</div>
 		</div>
 	);
 };
