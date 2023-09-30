@@ -4,7 +4,7 @@ import { Button } from './Button';
 
 const Hero = () => {
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center my-10'>
       <p className='text-[40px] sm:text-[50px] leading-10 font-montserrat font-bold'>I don&apos;t know how to put</p>
       <p className='text-[50px] leading-[65px] font-montserrat font-black text-[#009EFD] '>NEXUS CLUB</p>
       <div className='mt-5'>
