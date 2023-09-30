@@ -1,46 +1,70 @@
 import Image from "next/image";
 import React from "react";
 
+const memberData = [
+	{
+		name: "Firstname Lastname",
+		role: "ROLE",
+		imageUrl: "/images/member/profile2.png",
+	},
+	{
+		name: "Firstname Lastname",
+		role: "ROLE",
+		imageUrl: "/images/member/profile2.png",
+	},
+	{
+		name: "Firstname Lastname",
+		role: "ROLE",
+		imageUrl: "/images/member/profile2.png",
+	},
+	{
+		name: "Firstname Lastname",
+		role: "ROLE",
+		imageUrl: "/images/member/profile2.png",
+	},
+	{
+		name: "Firstname Lastname",
+		role: "ROLE",
+		imageUrl: "/images/member/profile2.png",
+	},
+	{
+		name: "Firstname Lastname",
+		role: "ROLE",
+		imageUrl: "/images/member/profile2.png",
+	},
+	{
+		name: "Firstname Lastname",
+		role: "ROLE",
+		imageUrl: "/images/member/profile3.png",
+	},
+	{
+		name: "Firstname Lastname",
+		role: "ROLE",
+		imageUrl: "/images/member/profile2.png",
+	},
+];
+
 const Mentors = () => {
 	return (
-		<div>
-			<h2 className=" text-2xl text-center md:text-left font-semibold my-4">
-				Our <span className=" text-primary">Mentors</span>
-			</h2>
+		<>
+			<h1 className="font-bold text-2xl font-montserrat mb-4 mt-12">
+				Our
+				<span className="font-bold ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
+					Mentors
+				</span>
+			</h1>
 
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-2  w-3/4 mx-auto ">
-				<ProfilePicture
-					name="Firstname Lastname"
-					role="ROLE"
-					imageUrl="/images/member/profile1.png"
-				/>
-				<ProfilePicture
-					name="Firstname Lastname"
-					role="ROLE"
-					imageUrl="/images/member/profile1.png"
-				/>
-				<ProfilePicture
-					name="Firstname Lastname"
-					role="ROLE"
-					imageUrl="/images/member/profile1.png"
-				/>
-				<ProfilePicture
-					name="Firstname Lastname"
-					role="ROLE"
-					imageUrl="/images/member/profile1.png"
-				/>
-				<ProfilePicture
-					name="Firstname Lastname"
-					role="ROLE"
-					imageUrl="/images/member/profile1.png"
-				/>
-				<ProfilePicture
-					name="Firstname Lastname"
-					role="ROLE"
-					imageUrl="/images/member/profile1.png"
-				/>
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-2">
+				{memberData.map((member, i) => (
+					<ProfilePicture
+						key={i}
+						name={member.name}
+						role={member.role}
+						imageUrl={member.imageUrl}
+					/>
+				))}
 			</div>
-		</div>
+		</>
 	);
 };
 
@@ -54,7 +78,7 @@ const ProfilePicture = ({ name, role, imageUrl }) => {
 				width={268}
 				alt={`${name}-${role}`}
 				src={imageUrl}
-				className="rounded-lg mx-auto"
+				className="rounded-lg w-full object-cover h-80"
 			/>
 			<div className="px-2 my-2 ">
 				<div className=" text-xs font-medium flex flex-row">{name}</div>

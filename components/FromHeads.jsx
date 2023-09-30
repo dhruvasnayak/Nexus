@@ -1,74 +1,11 @@
 import Image from "next/image";
 import React from "react";
-
-const head_data = [
-    {
-        imageUrl: "/images/project-icon/OFAAX40 12.png",
-        name: "John Doe",
-        domain: "EVM 1",
-        message: "I'm passionate about exploring the latest developments in EVM technology and how it's reshaping the future. Join me in discussing its impact on various industries."
-    },
-    {
-        imageUrl: "/images/project-icon/OFAAX40 12.png",
-        name: "Jane Smith",
-        domain: "EVM 2",
-        message: "Let's delve into the world of decentralized finance and its role in transforming traditional financial systems. Your insights on EVM 2 are highly valued."
-    },
-    {
-        imageUrl: "/images/project-icon/OFAAX40 12.png",
-        name: "Alice Johnson",
-        domain: "EVM 3",
-        message: "Exploring the potential of blockchain technology beyond cryptocurrencies is my passion. EVM 3 is the place to share ideas and innovations."
-    },
-    {
-        imageUrl: "/images/project-icon/OFAAX40 12.png",
-        name: "Bob Wilson",
-        domain: "EVM 4",
-        message: "Let's discuss the real-world applications of EVM 4 in supply chain management. Your expertise will contribute to a lively conversation."
-    },
-    {
-        imageUrl: "/images/project-icon/OFAAX40 12.png",
-        name: "Emily Davis",
-        domain: "EVM 5",
-        message: "EVM 5 is your gateway to understanding the intersection of art and technology. Join me in exploring how EVM is transforming the creative industries."
-    },
-    {
-        imageUrl: "/images/project-icon/OFAAX40 12.png",
-        name: "Michael Brown",
-        domain: "EVM 6",
-        message: "Let's unravel the mysteries of smart contracts and their potential in EVM 6. Your insights could pave the way for groundbreaking innovations."
-    },
-    {
-        imageUrl: "/images/project-icon/OFAAX40 12.png",
-        name: "Olivia Wilson",
-        domain: "EVM 7",
-        message: "I'm fascinated by the environmental implications of EVM 7. Join the discussion on sustainable blockchain solutions and their impact on the planet."
-    },
-    {
-        imageUrl: "/images/project-icon/OFAAX40 12.png",
-        name: "Daniel Lee",
-        domain: "EVM 8",
-        message: "EVM 8 is where we explore the future of finance. Share your thoughts on DeFi, NFTs, and more as we shape the financial landscape together."
-    },
-    {
-        imageUrl: "/images/project-icon/OFAAX40 12.png",
-        name: "Sophia Clark",
-        domain: "EVM 9",
-        message: "Join EVM 9 to discuss the latest trends in blockchain security. Your expertise will help us navigate the evolving landscape of digital trust."
-    },
-    {
-        imageUrl: "/images/project-icon/OFAAX40 12.png",
-        name: "William Adams",
-        domain: "EVM 10",
-        message: "EVM 10 is your hub for exploring the role of blockchain in healthcare. Let's envision a healthier future together through innovative solutions."
-    }
-];
-
+import { headCommentData } from "./data";
 
 export default function FromHeads() {
 	return (
 		<div className="phone:p-1 my-6 p-[0.5]">
-				<h1 className="font-bold text-2xl font-montserrat my-3">
+			<h1 className="font-bold text-2xl font-montserrat mb-4 mt-12">
 				From Our
 				<span className="font-bold ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
 					Heads
@@ -76,8 +13,7 @@ export default function FromHeads() {
 			</h1>
 
 			<div className="xl:columns-4 lg:columns-3 columns-1 sm:columns-2 gap-4 mx-auto space-y-3 pb-28">
-				{/* <div className="bg-gray-200 break-inside-avoi"></div> */}
-				{head_data.map((head) => (
+				{headCommentData.map((head) => (
 					<Heads
 						key={head.domain}
 						{...head}
@@ -89,24 +25,57 @@ export default function FromHeads() {
 }
 
 const Heads = (props) => {
+	let role_icon, tag;
+
+	if (props.role === "head") {
+		role_icon = { url: "/images/icons/star.svg", alt: "star" };
+		tag= "head"
+	}
+	else if (props.role === "domain head") {
+		role_icon = { url: "/images/icons/star.svg", alt: "star" };
+		tag= "domain head"
+	} else if (props.role === "core") {
+		role_icon = { url: "/images/icons/thunder.svg", alt: "thunder" };
+		tag= "core"
+	} else {
+		role_icon = { url: "/images/icons/user.svg", alt: "user" };
+		tag= "volunteer"
+	}
 	return (
-		<article className="transition-colors break-inside-avoid border-white/10 border-[1px] rounded-md p-4 hover:border-primary">
-			<div className="flex gap-2 bg-background font-montserrat">
-				<Image
-					height={100}
-					width={100}
-					src={props.imageUrl}
-					alt={`${props.name}-thumbnail`}
-					className="h-12 w-12"
-				/>
-				<article className="flex flex-col">
-					<h2 className="text-base font-bold font-poppins">{props.name}</h2>
-					<p className="text-xs font-medium tracking-wide font-poppins text-text-secondary">
-						{props.domain}
-					</p>
+		<article className="transition-colors break-inside-avoid border-white/20 border-[1px] rounded-md p-6 hover:bg-white/10">
+			<div className="flex gap-4">
+				<span className="relative ">
+					<Image
+						height={120}
+						width={120}
+						src={props.imageUrl}
+						alt={`${props.name}-thumbnail`}
+						className="h-10 w-10 object-contain flex-1 flex-grow"
+					/>
+					<Image
+						className="absolute -right-1 -translate-y-2 -bottom-1 w-4 h-4 p-1 rounded-full bg-primary text-white"
+						src={role_icon.url}
+						width={50}
+						height={50}
+						alt={role_icon.alt}
+					/>
+				</span>
+				<article className="flex flex-col w-full gap-y-0 justify-between">
+					<h2 className="text-base font-semibold font-bricolage line-clamp-1">
+						{props.name}
+					</h2>
+
+					<div className="flex justify-between items-center my-0.5">
+						<p className="text-xs font-medium tracking-wide font-inter text-text-secondary">
+							{props.domain}
+						</p>
+						<p className="text-[12px] font-montserrat flex items-center text-white bg-gradient-to-br from-primary to-secondary font-semibold rounded-2xl py-[1px] px-3">
+							{tag.toUpperCase()}
+						</p>
+					</div>
 				</article>
 			</div>
-			<div className="bg bg-shaded text-sm mt-4">
+			<div className="text-sm mt-2.5 font-inter text-white/80 leading-6">
 				<p>{props.message}</p>
 			</div>
 		</article>
