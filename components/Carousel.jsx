@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
-import './Carousel.css';
 
 const Carouseld = () => {
   const images = [
@@ -65,12 +64,12 @@ const Carouseld = () => {
         <Carousel
           ref={carouselRef}
           {...settings}
-          className="mt-6"
+          className=""
         >
           {images.map((item) => (
             <div key={item.id} className="">
               <img
-                className="h-[400px] sm:h-[500px] rounded-2xl"
+                className="object-cover h-[400px] sm:h-[450px] rounded-2xl"
                 src={item.src}
                 alt={item.alt}
               />
