@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import "./Carousel.css"
 
 const Carouseld = () => {
   const images = [
