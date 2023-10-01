@@ -176,7 +176,7 @@ const ProjectDetail = ({ params }) => {
 						}
 					/>
 				</div>
-				<div className="flex gap-4 items-center justify-center">
+				<div className="flex gap-4 items-center justify-center pb-4">
 					Domain:
 					<div className="border-2 border-white rounded-full hover:bg-secondary hover:text-black hover:border-secondary p-2 hover:cursor-default">
 						{
