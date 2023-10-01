@@ -8,7 +8,7 @@ const ProjectPage = () => {
 	return (
 		<div>
 			<div>
-				<h1 className="font-bold text-4xl font-montserrat pt-8 pb-4">
+				<h1 className="font-bold text-5xl font-montserrat pt-8 text-center">
 					Explore our
 					<span className="font-bold ml-2 bg-gradient-to-b from-primary to-secondary inline-block text-transparent bg-clip-text">
 						Projects

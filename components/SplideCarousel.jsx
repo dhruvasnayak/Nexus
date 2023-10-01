@@ -32,13 +32,7 @@ const SplideCarousel = ({projects}) => {
 									project.projectImage
 								}
 								alt={`Slide ${project.id}`}
-								width={
-									2000
-								}
-								height={
-									2000
-								}
-                                className="w-full flex"
+								layout="fill"
 							/>
 							<p>
 								{
