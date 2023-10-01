@@ -1,10 +1,10 @@
 import { Button } from "./Button";
 import ProjectContainer from "./ProjectContainer";
-import {projectData} from "./data";
+import { projectData } from "./data";
 
 const Projects = () => {
-
-	const firstThree = projectData.slice(0,3)
+	const firstThree =
+		projectData.slice(0, 3);
 
 	return (
 		<div>
@@ -16,12 +16,16 @@ const Projects = () => {
 			</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
 				{/* <div className="xl:columns-3 columns-1 md:columns-2 gap-4 mx-auto space-y-3 pb-28"> */}
-				{firstThree.map((project) => (
-					<ProjectContainer
-						key={project.id}
-						{...project}
-					/>
-				))}
+				{firstThree.map(
+					(project) => (
+						<ProjectContainer
+							key={
+								project.id
+							}
+							{...project}
+						/>
+					)
+				)}
 			</div>
 			<div className="flex justify-center items-center">
 				<Button
