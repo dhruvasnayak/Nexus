@@ -27,20 +27,17 @@ const SplideCarousel = ({projects}) => {
 							}
                             className="w-full flex flex-col p-20"
 						>
+							<div className="w-[500px] h-[300px] relative grid place-items-center">
 							<Image
 								src={
 									project.projectImage
 								}
 								alt={`Slide ${project.id}`}
-								width={
-									2000
-								}
-								height={
-									100
-								}
-								
-                                
+								layout="fill"
+								objectFit="cover"
 							/>
+							</div>
+
 							<p>
 								{
 									project
