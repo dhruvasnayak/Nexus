@@ -6,7 +6,7 @@ import "@splidejs/react-splide/css";
 
 const ProjectPage = () => {
 	return (
-		<div>
+		<div className="flex flex-col h-screen w-full">
 			<div>
 				<h1 className="font-bold text-5xl font-montserrat pt-8 text-center">
 					Explore our
@@ -17,6 +17,7 @@ const ProjectPage = () => {
 			</div>
 			<SplideCarousel
 				projects={projectData}
+				className="flex h-full"
 			/>
 		</div>
 	);
