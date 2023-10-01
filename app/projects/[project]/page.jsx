@@ -9,6 +9,8 @@ import {
 	faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
+import Paragraphs from "../../../components/Paragraphs";
+import { Tooltip } from "react-tooltip";
 
 const ProjectDetail = ({ params }) => {
 	const router = useRouter();
@@ -25,13 +27,18 @@ const ProjectDetail = ({ params }) => {
 	function goFront() {
 		const nextProjectId =
 			projectIdValue + 1;
-		
-		router.push(`/projects/${nextProjectId}`)
+
+		router.push(
+			`/projects/${nextProjectId}`
+		);
 	}
 
 	function goBack() {
-		const prevProjectID = projectIdValue - 1;
-		router.push(`/projects/${prevProjectID}`)
+		const prevProjectID =
+			projectIdValue - 1;
+		router.push(
+			`/projects/${prevProjectID}`
+		);
 	}
 
 	if (!project) {
@@ -45,89 +52,133 @@ const ProjectDetail = ({ params }) => {
 	}
 
 	return (
-		<div className="flex flex-col">
-			<div className="w-full flex flex-row">
-				<div
-					className={
-						"w-1/6 items-center justify-center flex flex-col gap-2 hover:bg-gradient-to-l hover:from-black hover:to-primary rounded-bl-lg hover:cursor-pointer" +
-						(project.id ===
-						1
-							? " invisible"
-							: " ")
+		<div className="mx-2 md:max-w-xl md:m-auto">
+			<div className="flex flex-col justify-between items-center max-w-lg sm:max-w-screen-sm">
+				<div className="sm:text-6xl font-montserrat font-extrabold border-b-2 w-full flex text-4xl justify-between py-4">
+					{
+						project.projectName
 					}
-					onClick={goBack}
-				>
+				</div>
+
+				<div className="flex flex-row justify-between w-full pt-4">
 					<FontAwesomeIcon
+						onClick={goBack}
+						className={
+							"border border-1 border-white rounded-lg p-2 hover:cursor-pointer " +
+							(projectIdValue ===
+							1
+								? " invisible"
+								: "")
+						}
 						icon={
 							faArrowLeft
 						}
+						data-tooltip-id="my-tooltip"
+						data-tooltip-content="Go to Previous Project"
+						data-tooltip-place="right"
+						data-tooltip-delay-show="40"
+						data-tooltip-delay-hide="40"
 					/>
-					Previous Project
-				</div>
-				<div className="w-2/3">
-					<div className="flex flex-col justify-between items-center  ">
-						<div className="sm:text-8xl font-montserrat font-extrabold border-b-2 w-full flex justify-between p-4">
-							<Image
-								src={
-									project.projectThumbnail
-								}
-								className="w-8 sm:w-24 rounded-lg"
-								alt="thumbnail"
-								width={
-									100
-								}
-								height={
-									50
-								}
-							/>
-							{
-								project.projectName
-							}
-						</div>
-						<div className="m-8">
-							<Image
-								src={
-									project.projectImage
-								}
-								alt="project-image"
-								className="rounded-xl w-full border-double border-2 hover:shadow-lg  "
-								width={
-									1050
-								}
-								height={
-									150
-								}
-							/>
-						</div>
-						<div className="m-8 font-montserrat text-lg">
-							{
-								project.summary
-							}
-						</div>
-					</div>
-				</div>
-				<div
-					className={
-						"flex w-1/6 justify-center items-center flex flex-col gap-2 hover:bg-gradient-to-r hover:from-black hover:to-primary rounded-br-lg hover:cursor-pointer" +
-						(projectData.length ===
-						project.id
-							? " invisible"
-							: " ")
-					}
-					onClick={goFront}
-				>
+					<Link
+						href={
+							project
+								.links[0]
+								.link
+						}
+						target="_blank"
+						className="hover:cursor-pointer border border-1 border-white rounded-lg"
+						data-tooltip-id="my-tooltip"
+						data-tooltip-content="Star the Repository Here"
+						data-tooltip-place="right"
+						data-tooltip-delay-show="40"
+						data-tooltip-delay-hide="40"
+					>
+						<Image
+							src="/images/icons/social-media/github.svg"
+							width={30}
+							height={30}
+							alt="Github"
+						/>
+					</Link>
+
+					<Image
+						src="/images/icons/blue-heart.svg"
+						width={30}
+						height={30}
+						alt="Github"
+						className="hover:cursor-pointer border border-1 p-0.5 border-white rounded-lg"
+						data-tooltip-id="my-tooltip"
+						data-tooltip-content="Leave a heart"
+						data-tooltip-place="right"
+						data-tooltip-delay-show="40"
+						data-tooltip-delay-hide="40"
+					/>
+
+					<Link
+						href={
+							project
+								.links[1]
+								.link
+						}
+						target="_blank"
+						className="hover:cursor-pointer border border-1 border-white rounded-lg"
+						data-tooltip-id="my-tooltip"
+						data-tooltip-content="Check out the website for yourself"
+						data-tooltip-place="right"
+						data-tooltip-delay-show="40"
+						data-tooltip-delay-hide="40"
+					>
+						<Image
+							src="/images/icons/social-media/anchor.svg"
+							width={30}
+							height={30}
+							alt="Github"
+							className="-rotate-45"
+						/>
+					</Link>
 					<FontAwesomeIcon
 						icon={
 							faArrowRight
 						}
+						onClick={
+							goFront
+						}
+						className={
+							"border border-1 border-white rounded-lg p-2 hover:cursor-pointer" +
+							(projectData.length ===
+							projectIdValue
+								? " invisible"
+								: " ")
+						}
+						data-tooltip-id="my-tooltip"
+						data-tooltip-content="Go to the Next Project"
+						data-tooltip-place="right"
+						data-tooltip-delay-show="40"
+						data-tooltip-delay-hide="40"
 					/>
-					Next Project
 				</div>
-			</div>
-			<div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-2 p-5 m-8 rounded-md">
-				<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-primary hover:text-black">
-					Domain:{" "}
-					<div>
+
+				<div className="m-8">
+					<Image
+						src={
+							project.projectImage
+						}
+						alt="project-image"
+						className="rounded-xl w-full border-double border-2 hover:shadow-lg  "
+						width={1050}
+						height={150}
+					/>
+				</div>
+				<div className="m-8 font-montserrat text-lg">
+					<Paragraphs
+						text={
+							project.summary.long
+						}
+					/>
+				</div>
+				<div className="flex gap-4 items-center justify-center">
+					Domain:
+					<div className="border-2 border-white rounded-full hover:bg-secondary hover:text-black hover:border-secondary p-2 hover:cursor-default">
 						{
 							project
 								.domain
@@ -135,142 +186,13 @@ const ProjectDetail = ({ params }) => {
 						}
 					</div>
 				</div>
-				<Link
-					href={
-						project.links[0]
-							.link
-					}
-				>
-					<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-primary hover:text-black">
-						Star the Repo
-						here:{" "}
-						<div>
-							{
-								project.projectName
-							}{" "}
-							Github
-						</div>
-					</div>
-				</Link>
-				<Link
-					href={
-						project.links[1]
-							.link
-					}
-				>
-					<div className="font-montserrat font-bold border-2 m-4 p-4 rounded-md hover:bg-primary hover:text-black">
-						Visit the
-						website here:
-						{""}
-						<div>
-							{
-								project.projectName
-							}
-						</div>
-					</div>
-				</Link>
 			</div>
+			<Tooltip
+				id="my-tooltip"
+				className="bg-blue-500"
+			/>
 		</div>
 	);
 };
-
-// const project_data = [
-// 	{
-// 		id: 1,
-// 		projectThumbnail: "/images/project-icon/notevault-thumbnail.png",
-// 		projectName: "NoteVault",
-// 		domain: {
-// 			short: "Web dev",
-// 			long: "Web Development",
-// 		},
-// 		projectImage: "/images/projects/note-vault-preview.png",
-// 		summary:
-// 			"NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.NoteVault is a versatile note-taking platform designed to enhance organization and idea connectivity. It empowers users to create, link, and manage notes efficiently, fostering better understanding and exploration of their thoughts.",
-// 		links: [
-// 			{
-// 				name: "Github",
-// 				link: "https://github.com/Nexus-PES/NoteVault",
-// 				linkImage: "/images/icons/social-media/github.svg",
-// 			},
-// 			{
-// 				name: "Deployed Site",
-// 				link: "https://notevault.vercel.app/",
-// 				linkImage: "/images/icons/social-media/anchor.svg",
-// 			},
-// 		],
-// 	},
-// 	{
-// 		id: 2,
-// 		projectThumbnail: "/images/project-icon/nexus-website-thumbnail.png",
-// 		projectName: "Nexus Website",
-// 		domain: {
-// 			short: "Web dev",
-// 			long: "Web Development",
-// 		},
-// 		projectImage: "/images/projects/nexus-website-preview.png",
-// 		summary:
-// 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur qui",
-// 		links: [
-// 			{
-// 				name: "Github",
-// 				link: "https://github.com/Nexus-PES/Nexus",
-// 				linkImage: "/images/icons/social-media/github.svg",
-// 			},
-// 			{
-// 				name: "Deployed Site",
-// 				link: "https://nexus-pes.vercel.app/",
-// 				linkImage: "/images/icons/social-media/anchor.svg",
-// 			},
-// 		],
-// 	},
-// 	{
-// 		id: 3,
-// 		projectThumbnail: "/images/project-icon/OFAAX40 12.png",
-// 		projectName: "Project name",
-// 		domain: {
-// 			short: "Web dev",
-// 			long: "Web Development",
-// 		},
-// 		projectImage: "/images/events/unsplash_-HIiNFXcbtQ.png",
-// 		summary:
-// 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur qui",
-// 		links: [
-// 			{
-// 				name: "Github",
-// 				link: "https://github.com/Nexus-PES/NoteVault",
-// 				linkImage: "/images/icons/social-media/github.svg",
-// 			},
-// 			{
-// 				name: "Deployed Site",
-// 				link: "https://notevault.vercel.app/",
-// 				linkImage: "/images/icons/social-media/anchor.svg",
-// 			},
-// 		],
-// 	},
-// 	{
-// 		id: 4,
-// 		projectThumbnail: "/images/project-icon/OFAAX40 1.png",
-// 		projectName: "Project name",
-// 		domain: {
-// 			short: "Web dev",
-// 			long: "Web Development",
-// 		},
-// 		projectImage: "/images/events/unsplash_-HIiNFXcbtQ.png",
-// 		summary:
-// 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente consectetur nemo aliquam nostrum autem vitae, cupiditate quia pariatur qui",
-// 		links: [
-// 			{
-// 				name: "Github",
-// 				link: "https://github.com/Nexus-PES/NoteVault",
-// 				linkImage: "/images/icons/social-media/github.svg",
-// 			},
-// 			{
-// 				name: "Deployed Site",
-// 				link: "https://notevault.vercel.app/",
-// 				linkImage: "/images/icons/social-media/anchor.svg",
-// 			},
-// 		],
-// 	},
-// ];
 
 export default ProjectDetail;
