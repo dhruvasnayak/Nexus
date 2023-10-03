@@ -15,7 +15,6 @@ const Projects = () => {
 				</span>
 			</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-				{/* <div className="xl:columns-3 columns-1 md:columns-2 gap-4 mx-auto space-y-3 pb-28"> */}
 				{firstThree.map(
 					(project) => (
 						<ProjectContainer
