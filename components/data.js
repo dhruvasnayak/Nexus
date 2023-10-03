@@ -106,6 +106,13 @@ export const projectData = [
 	},
 ];
 
+
+var idList = projectData.map((project) => (project.id))
+
+const randomIndex = Math.floor(Math.random() * idList.length)
+
+export const idOfDay = idList[randomIndex]
+
 export const activityData = [
 	{
 		id: 1,

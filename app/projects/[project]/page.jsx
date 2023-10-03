@@ -62,19 +62,29 @@ const ProjectDetail = ({ params }) => {
 
 				<div className="flex flex-row justify-between w-full pt-4">
 					<FontAwesomeIcon
-						onClick={goBack}
+						onClick={
+							projectIdValue ===
+							1
+								? null
+								: goBack
+						}
 						className={
-							"border border-1 border-white rounded-lg p-2 hover:cursor-pointer " +
+							" " +
 							(projectIdValue ===
 							1
-								? " invisible"
-								: "")
+								? " hover:cursor-not-allowed border-2 border-slate-600 text-slate-600 rounded-lg p-2"
+								: " border border-1 border-white rounded-lg p-2 hover:cursor-pointer")
 						}
 						icon={
 							faArrowLeft
 						}
 						data-tooltip-id="my-tooltip"
-						data-tooltip-content="Go to Previous Project"
+						data-tooltip-content={
+							projectIdValue ===
+							1
+								? ""
+								: "Go to Previous Project"
+						}
 						data-tooltip-place="right"
 						data-tooltip-delay-show="40"
 						data-tooltip-delay-hide="40"
@@ -137,21 +147,29 @@ const ProjectDetail = ({ params }) => {
 						/>
 					</Link>
 					<FontAwesomeIcon
+						onClick={
+							projectData.length ===
+							projectIdValue
+								? null
+								: goFront
+						}
+						className={
+							" " +
+							(projectData.length ===
+							projectIdValue
+								? " hover:cursor-not-allowed border-1 border border-slate-600 text-slate-600 rounded-lg p-2"
+								: " border border-1 border-white rounded-lg p-2 hover:cursor-pointer")
+						}
 						icon={
 							faArrowRight
 						}
-						onClick={
-							goFront
-						}
-						className={
-							"border border-1 border-white rounded-lg p-2 hover:cursor-pointer" +
-							(projectData.length ===
-							projectIdValue
-								? " invisible"
-								: " ")
-						}
 						data-tooltip-id="my-tooltip"
-						data-tooltip-content="Go to the Next Project"
+						data-tooltip-content={
+							projectData.length ===
+							projectIdValue
+								? ""
+								: "Go to the Next Project"
+						}
 						data-tooltip-place="right"
 						data-tooltip-delay-show="40"
 						data-tooltip-delay-hide="40"
@@ -172,7 +190,9 @@ const ProjectDetail = ({ params }) => {
 				<div className="m-8 font-montserrat text-lg">
 					<Paragraphs
 						text={
-							project.summary.long
+							project
+								.summary
+								.long
 						}
 					/>
 				</div>
